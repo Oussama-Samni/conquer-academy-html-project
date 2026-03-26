@@ -106,14 +106,14 @@
   &__title {
     font-size: a.$font-size-xl;
     font-weight: a.$font-weight-bold;
-    color: a.$color-heading;
+    color: a.$color-white;
     margin-bottom: a.$spacing-md;
     padding-bottom: a.$spacing-sm;
-    border-bottom: 2px solid a.$color-border;
+    border-bottom: 2px solid rgba(a.$color-white, 0.12);
   }
 
   p {
-    color: a.$color-text;
+    color: rgba(a.$color-white, 0.78);
     line-height: a.$line-height-normal;
     margin-bottom: a.$spacing-md;
   }
@@ -285,7 +285,7 @@
 
   li {
     font-size: a.$font-size-base;
-    color: a.$color-text;
+    color: rgba(a.$color-white, 0.78);
     line-height: a.$line-height-normal;
     padding-left: a.$spacing-lg;
     position: relative;
