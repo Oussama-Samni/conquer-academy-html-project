@@ -1,0 +1,197 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Back to top
+// ================================
+
+.back-to-top {
+  position: fixed;
+  bottom: a.$spacing-xl;
+  right: a.$spacing-xl;
+  width: 44px;
+  height: 44px;
+  background-color: a.$color-primary;
+  color: a.$color-white;
+  border-radius: a.$radius-full;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: a.$font-size-lg;
+  transition: background-color a.$transition-fast;
+
+  // Safari fallback: always visible
+  opacity: 1;
+  pointer-events: auto;
+
+  // Chrome/Edge: show only after scrolling 40% of the page
+  @supports (animation-timeline: scroll()) {
+    opacity: 0;
+    pointer-events: none;
+    animation: back-to-top-show linear both;
+    animation-timeline: scroll();
+    animation-range: 40% 41%;
+  }
+
+  &:hover {
+    background-color: a.$color-primary-hover;
+  }
+}
+
+@keyframes back-to-top-show {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// ================================
+// About
+// ================================
+
+.about {
+  padding: a.$spacing-3xl 0;
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-md;
+  }
+
+  &__text {
+    color: a.$color-muted;
+    line-height: a.$line-height-normal;
+    margin-bottom: a.$spacing-sm;
+
+    &:last-of-type {
+      margin-bottom: a.$spacing-xl;
+    }
+  }
+}
+
+// ================================
+// Courses
+// ================================
+
+.courses {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-3xl 0;
+
+  &__header {
+    margin-bottom: a.$spacing-2xl;
+  }
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__subtitle {
+    color: rgba(a.$color-white, 0.65);
+  }
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-lg;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__footer {
+    margin-top: a.$spacing-2xl;
+    text-align: center;
+  }
+}
+
+// ================================
+// Card
+// ================================
+
+.card {
+  background-color: rgba(a.$color-white, 0.04);
+  border: 1px solid rgba(a.$color-white, 0.08);
+  border-radius: a.$radius-lg;
+  padding: a.$spacing-xl;
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-md;
+
+  &__title {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+  }
+
+  &__text {
+    color: rgba(a.$color-white, 0.65);
+    line-height: a.$line-height-normal;
+    flex: 1;
+  }
+
+  &__list {
+    @extend %list-reset;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-xs;
+
+    li {
+      font-size: a.$font-size-sm;
+      color: a.$color-secondary;
+
+      &::before {
+        content: '✓  ';
+      }
+    }
+  }
+
+  // Light variant — for sections with light background
+  &--light {
+    background-color: a.$color-white;
+    border-color: a.$color-border;
+    box-shadow: a.$shadow-sm;
+
+    .card__title { color: a.$color-heading; }
+    .card__text  { color: a.$color-muted; }
+  }
+}
+
+// ================================
+// Blog Preview
+// ================================
+
+.blog-preview {
+  padding: a.$spacing-3xl 0;
+
+  &__header {
+    margin-bottom: a.$spacing-2xl;
+  }
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__subtitle {
+    color: a.$color-muted;
+  }
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-lg;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__footer {
+    margin-top: a.$spacing-2xl;
+    text-align: center;
+  }
+}

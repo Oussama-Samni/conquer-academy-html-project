@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro - Crear Cuenta | Conquer Academy</title>
+  <meta name="description" content="Crea tu cuenta gratuita en Conquer Academy y accede a cursos de desarrollo web de calidad. Registrate hoy y empieza a aprender.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.png" sizes="any">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="/img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
+        <nav class="nav" aria-label="Navegacion principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
+            <li class="nav__item">
+              <details class="nav__dropdown">
+                <summary class="nav__link">Cursos</summary>
+                <ul class="nav__submenu">
+                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
+                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
+                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
+                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
+                </ul>
+              </details>
+            </li>
+            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
+            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+          </ul>
+          <div class="nav__auth">
+            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
+            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+          </div>
+        </nav>
+        <div class="header__actions">
+          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-home">← Inicio</a>
+
+  <!-- Main Content -->
+  <main class="auth-page">
+    <div class="container">
+      <div class="auth-page__shell">
+        <section class="auth-panel">
+          <div class="auth-panel__inner">
+            <span class="auth-panel__eyebrow">Nuevo alumno</span>
+            <div>
+              <h1 class="auth-panel__title">Crear cuenta</h1>
+              <p class="auth-panel__text">Unete a Conquer Academy y empieza tu camino como desarrollador web con una cuenta gratuita y acceso inmediato al campus.</p>
+            </div>
+            <div class="auth-panel__stat-grid">
+              <div class="auth-panel__stat">
+                <span class="auth-panel__stat-value">+1.200</span>
+                <span class="auth-panel__stat-label">Alumnos activos</span>
+              </div>
+              <div class="auth-panel__stat">
+                <span class="auth-panel__stat-value">4.8/5</span>
+                <span class="auth-panel__stat-label">Valoracion media</span>
+              </div>
+            </div>
+            <ul class="auth-panel__list">
+              <li class="auth-panel__item">Acceso inmediato a recursos introductorios</li>
+              <li class="auth-panel__item">Seguimiento de progreso y certificados</li>
+              <li class="auth-panel__item">Recomendaciones personalizadas de cursos</li>
+              <li class="auth-panel__item">Newsletter con ofertas y plazas prioritarias</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="auth-card">
+          <div class="auth-card__inner">
+            <div class="auth-card__header">
+              <h2 class="auth-card__title">Formulario de registro</h2>
+              <p class="auth-card__text">Completa tus datos para crear tu cuenta y personalizar tu experiencia desde el primer acceso.</p>
+            </div>
+
+            <form class="auth-form" action="#" method="post">
+              <fieldset class="auth-form__group">
+                <legend class="auth-form__legend">Informacion personal</legend>
+
+                <div class="auth-form__grid">
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="nombre">Nombre *</label>
+                    <input class="auth-form__input" type="text" id="nombre" name="nombre" required minlength="2" maxlength="50" placeholder="Tu nombre">
+                  </div>
+
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="apellidos">Apellidos *</label>
+                    <input class="auth-form__input" type="text" id="apellidos" name="apellidos" required minlength="2" maxlength="100" placeholder="Tus apellidos">
+                  </div>
+
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="fecha-nacimiento">Fecha de nacimiento</label>
+                    <input class="auth-form__input" type="date" id="fecha-nacimiento" name="fecha_nacimiento">
+                  </div>
+
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="pais">Pais *</label>
+                    <input class="auth-form__input" type="text" id="pais" name="pais" list="lista-paises" required placeholder="Escribe para buscar tu pais">
+                    <datalist id="lista-paises">
+              <option value="Afganistan">
+              <option value="Albania">
+              <option value="Alemania">
+              <option value="Andorra">
+              <option value="Angola">
+              <option value="Antigua y Barbuda">
+              <option value="Arabia Saudita">
+              <option value="Argelia">
+              <option value="Argentina">
+              <option value="Armenia">
+              <option value="Australia">
+              <option value="Austria">
+              <option value="Azerbaiyan">
+              <option value="Bahamas">
+              <option value="Banglades">
+              <option value="Barbados">
+              <option value="Barein">
+              <option value="Belgica">
+              <option value="Belice">
+              <option value="Benin">
+              <option value="Bielorrusia">
+              <option value="Birmania">
+              <option value="Bolivia">
+              <option value="Bosnia y Herzegovina">
+              <option value="Botsuana">
+              <option value="Brasil">
+              <option value="Brunei">
+              <option value="Bulgaria">
+              <option value="Burkina Faso">
+              <option value="Burundi">
+              <option value="Butan">
+              <option value="Cabo Verde">
+              <option value="Camboya">
+              <option value="Camerun">
+              <option value="Canada">
+              <option value="Catar">
+              <option value="Chad">
+              <option value="Chile">
+              <option value="China">
+              <option value="Chipre">
+              <option value="Colombia">
+              <option value="Comoras">
+              <option value="Corea del Norte">
+              <option value="Corea del Sur">
+              <option value="Costa de Marfil">
+              <option value="Costa Rica">
+              <option value="Croacia">
+              <option value="Cuba">
+              <option value="Dinamarca">
+              <option value="Dominica">
+              <option value="Ecuador">
+              <option value="Egipto">
+              <option value="El Salvador">
+              <option value="Emiratos Arabes Unidos">
+              <option value="Eritrea">
+              <option value="Eslovaquia">
+              <option value="Eslovenia">
+              <option value="Espana">
+              <option value="Estados Unidos">
+              <option value="Estonia">
+              <option value="Etiopia">
+              <option value="Filipinas">
+              <option value="Finlandia">
+              <option value="Fiyi">
+              <option value="Francia">
+              <option value="Gabon">
+              <option value="Gambia">
+              <option value="Georgia">
+              <option value="Ghana">
+              <option value="Granada">
+              <option value="Grecia">
+              <option value="Guatemala">
+              <option value="Guinea">
+              <option value="Guinea-Bisau">
+              <option value="Guinea Ecuatorial">
+              <option value="Guyana">
+              <option value="Haiti">
+              <option value="Honduras">
+              <option value="Hungria">
+              <option value="India">
+              <option value="Indonesia">
+              <option value="Irak">
+              <option value="Iran">
+              <option value="Irlanda">
+              <option value="Islandia">
+              <option value="Israel">
+              <option value="Italia">
+              <option value="Jamaica">
+              <option value="Japon">
+              <option value="Jordania">
+              <option value="Kazajistan">
+              <option value="Kenia">
+              <option value="Kirguistan">
+              <option value="Kiribati">
+              <option value="Kuwait">
+              <option value="Laos">
+              <option value="Lesoto">
+              <option value="Letonia">
+              <option value="Libano">
+              <option value="Liberia">
+              <option value="Libia">
+              <option value="Liechtenstein">
+              <option value="Lituania">
+              <option value="Luxemburgo">
+              <option value="Macedonia del Norte">
+              <option value="Madagascar">
+              <option value="Malasia">
+              <option value="Malaui">
+              <option value="Maldivas">
+              <option value="Mali">
+              <option value="Malta">
+              <option value="Marruecos">
+              <option value="Mauricio">
+              <option value="Mauritania">
+              <option value="Mexico">
+              <option value="Micronesia">
+              <option value="Moldavia">
+              <option value="Monaco">
+              <option value="Mongolia">
+              <option value="Montenegro">
+              <option value="Mozambique">
+              <option value="Namibia">
+              <option value="Nauru">
+              <option value="Nepal">
+              <option value="Nicaragua">
+              <option value="Niger">
+              <option value="Nigeria">
+              <option value="Noruega">
+              <option value="Nueva Zelanda">
+              <option value="Oman">
+              <option value="Paises Bajos">
+              <option value="Pakistan">
+              <option value="Palaos">
+              <option value="Panama">
+              <option value="Papua Nueva Guinea">
+              <option value="Paraguay">
+              <option value="Peru">
+              <option value="Polonia">
+              <option value="Portugal">
+              <option value="Reino Unido">
+              <option value="Republica Centroafricana">
+              <option value="Republica Checa">
+              <option value="Republica del Congo">
+              <option value="Republica Democratica del Congo">
+              <option value="Republica Dominicana">
+              <option value="Ruanda">
+              <option value="Rumania">
+              <option value="Rusia">
+              <option value="Samoa">
+              <option value="San Cristobal y Nieves">
+              <option value="San Marino">
+              <option value="San Vicente y las Granadinas">
+              <option value="Santa Lucia">
+              <option value="Santo Tome y Principe">
+              <option value="Senegal">
+              <option value="Serbia">
+              <option value="Seychelles">
+              <option value="Sierra Leona">
+              <option value="Singapur">
+              <option value="Siria">
+              <option value="Somalia">
+              <option value="Sri Lanka">
+              <option value="Suazilandia">
+              <option value="Sudafrica">
+              <option value="Sudan">
+              <option value="Sudan del Sur">
+              <option value="Suecia">
+              <option value="Suiza">
+              <option value="Surinam">
+              <option value="Tailandia">
+              <option value="Tanzania">
+              <option value="Tayikistan">
+              <option value="Timor Oriental">
+              <option value="Togo">
+              <option value="Tonga">
+              <option value="Trinidad y Tobago">
+              <option value="Tunez">
+              <option value="Turkmenistan">
+              <option value="Turquia">
+              <option value="Tuvalu">
+              <option value="Ucrania">
+              <option value="Uganda">
+              <option value="Uruguay">
+              <option value="Uzbekistan">
+              <option value="Vanuatu">
+              <option value="Vaticano">
+              <option value="Venezuela">
+              <option value="Vietnam">
+              <option value="Yemen">
+              <option value="Yibuti">
+              <option value="Zambia">
+              <option value="Zimbabue">
+                    </datalist>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="auth-form__group">
+                <legend class="auth-form__legend">Datos de la cuenta</legend>
+
+                <div class="auth-form__grid">
+                  <div class="auth-form__field auth-form__field--full">
+                    <label class="auth-form__label" for="email">Correo electronico *</label>
+                    <input class="auth-form__input" type="email" id="email" name="email" required placeholder="tu@email.com">
+                  </div>
+
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="password">Contrasena *</label>
+                    <input class="auth-form__input" type="password" id="password" name="password" required minlength="8" placeholder="Minimo 8 caracteres">
+                  </div>
+
+                  <div class="auth-form__field">
+                    <label class="auth-form__label" for="password-confirm">Confirmar contrasena *</label>
+                    <input class="auth-form__input" type="password" id="password-confirm" name="password_confirm" required minlength="8" placeholder="Repite tu contrasena">
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="auth-form__group">
+                <legend class="auth-form__legend">Preferencias</legend>
+
+                <div class="auth-form__grid">
+                  <div class="auth-form__field auth-form__field--full">
+                    <label class="auth-form__label" for="nivel">Tu nivel actual de programacion</label>
+                    <select class="auth-form__select" id="nivel" name="nivel">
+              <option value="principiante">Principiante - Nunca he programado</option>
+              <option value="basico">Basico - Se algo de HTML/CSS</option>
+              <option value="intermedio">Intermedio - Conozco JavaScript</option>
+              <option value="avanzado">Avanzado - Trabajo como desarrollador</option>
+                    </select>
+                  </div>
+
+                  <fieldset class="auth-form__group auth-form__field auth-form__field--full">
+                    <legend class="auth-form__legend">Que te gustaria aprender?</legend>
+                    <p class="auth-form__hint">Selecciona todos los temas que te interesen.</p>
+                    <div class="auth-form__checks">
+                      <label class="auth-form__choice" for="interes-html">
+                        <input type="checkbox" id="interes-html" name="intereses" value="html">
+                        <span>HTML y CSS</span>
+                      </label>
+                      <label class="auth-form__choice" for="interes-js">
+                        <input type="checkbox" id="interes-js" name="intereses" value="javascript">
+                        <span>JavaScript</span>
+                      </label>
+                      <label class="auth-form__choice" for="interes-react">
+                        <input type="checkbox" id="interes-react" name="intereses" value="react">
+                        <span>React / Frontend</span>
+                      </label>
+                      <label class="auth-form__choice" for="interes-backend">
+                        <input type="checkbox" id="interes-backend" name="intereses" value="backend">
+                        <span>Backend / Node.js</span>
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <div class="auth-form__field auth-form__field--full">
+                    <label class="auth-form__label" for="como-conociste">Como nos conociste?</label>
+                    <select class="auth-form__select" id="como-conociste" name="como_conociste">
+              <option value="">Selecciona una opcion</option>
+              <option value="google">Busqueda en Google</option>
+              <option value="youtube">YouTube</option>
+              <option value="redes">Redes sociales</option>
+              <option value="amigo">Recomendacion de un amigo</option>
+              <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+
+              <fieldset class="auth-form__group">
+                <legend class="auth-form__legend">Terminos y condiciones</legend>
+
+                <div class="auth-form__checks">
+                  <label class="auth-form__choice" for="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <span>He leido y acepto los <a href="aviso-legal.html">terminos y condiciones</a> *</span>
+                  </label>
+
+                  <label class="auth-form__choice" for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <span>Quiero recibir noticias y ofertas por email</span>
+                  </label>
+                </div>
+              </fieldset>
+
+              <div class="auth-form__actions">
+                <button class="btn btn--primary" type="submit">Crear mi cuenta</button>
+                <button class="btn btn--outline" type="reset">Limpiar formulario</button>
+                <span class="auth-form__meta">* Campos obligatorios</span>
+              </div>
+
+            </form>
+
+            <div class="auth-inline-card">
+              <h3 class="auth-inline-card__title">Ya tienes cuenta?</h3>
+              <p class="auth-inline-card__text">Si ya estas registrado, puedes iniciar sesion con tus credenciales actuales.</p>
+              <a class="btn btn--outline" href="login.html">Ir a login</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
+        <nav class="footer__nav" aria-label="Pie de pagina">
+          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>

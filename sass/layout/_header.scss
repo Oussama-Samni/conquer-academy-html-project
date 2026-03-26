@@ -1,0 +1,75 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Header
+// ================================
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: a.$z-navbar;
+  background-color: a.$color-bg-dark;
+  border-bottom: 1px solid rgba(a.$color-white, 0.08);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+
+    @include a.respond-to(desktop) {
+      height: 72px;
+      justify-content: space-between;
+      gap: a.$spacing-xl;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    img {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &__toggle-input {
+    display: none;
+  }
+
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    padding-block: a.$spacing-xs;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: a.$color-white;
+      border-radius: a.$radius-full;
+      transition: a.$transition-fast;
+    }
+
+    @include a.respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  // Hamburger → X when open
+  &__toggle-input:checked ~ .header__actions .header__toggle {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: a.$spacing-sm;
+  }
+}

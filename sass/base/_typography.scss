@@ -1,0 +1,29 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Base Typography
+// ================================
+
+body {
+  font-family: a.$font-primary;
+  font-size: a.$font-size-base;
+  font-weight: a.$font-weight-regular;
+  line-height: a.$line-height-normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: a.$font-weight-bold;
+  line-height: a.$line-height-tight;
+}
+
+h1 { font-size: a.$font-size-3xl; }
+h2 { font-size: a.$font-size-2xl; }
+h3 { font-size: a.$font-size-xl; }
+h4 { font-size: a.$font-size-lg; }
+h5 { font-size: a.$font-size-md; }
+h6 { font-size: a.$font-size-base; }
+
+strong { font-weight: a.$font-weight-bold; }
+em     { font-style: italic; }
+
+small  { font-size: a.$font-size-sm; }

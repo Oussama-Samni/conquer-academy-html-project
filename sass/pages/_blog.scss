@@ -1,0 +1,225 @@
+@use '../abstracts/abstracts' as a;
+
+.blog-page {
+  &__hero {
+    background-color: a.$color-bg-dark;
+    padding: a.$spacing-2xl 0;
+
+    @include a.respond-to(desktop) {
+      padding: a.$spacing-3xl 0;
+    }
+  }
+
+  &__hero-title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-sm;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-3xl;
+    }
+  }
+
+  &__hero-subtitle {
+    max-width: 640px;
+    color: rgba(a.$color-white, 0.68);
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-md;
+      max-width: 760px;
+    }
+  }
+
+  &__content {
+    padding: a.$spacing-3xl 0;
+  }
+
+  &__main {
+    display: grid;
+    gap: a.$spacing-xl;
+  }
+
+  &__aside {
+    display: grid;
+    gap: a.$spacing-xl;
+    margin-top: a.$spacing-xl;
+  }
+}
+
+.blog-section {
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-lg;
+  }
+}
+
+.blog-featured {
+  background: linear-gradient(135deg, a.$color-bg-dark 0, rgba(a.$color-primary, 0.88) 100%);
+  border-radius: a.$radius-lg;
+  padding: a.$spacing-xl;
+  color: a.$color-white;
+  box-shadow: a.$shadow-lg;
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-md;
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px a.$spacing-sm;
+    margin-bottom: a.$spacing-md;
+    border-radius: a.$radius-full;
+    background-color: rgba(a.$color-white, 0.12);
+    color: a.$color-secondary;
+    font-size: a.$font-size-xs;
+    font-weight: a.$font-weight-bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    margin-bottom: 0;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-2xl;
+    }
+  }
+
+  &__text {
+    color: rgba(a.$color-white, 0.76);
+    line-height: a.$line-height-normal;
+    margin-bottom: 0;
+  }
+
+  &__media {
+    overflow: hidden;
+    border-radius: a.$radius-lg;
+    border: 1px solid rgba(a.$color-white, 0.12);
+    aspect-ratio: 16 / 9;
+    margin: 0;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.blog-list {
+  display: grid;
+  gap: a.$spacing-lg;
+  grid-template-columns: 1fr;
+}
+
+.blog-card {
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-lg;
+  box-shadow: a.$shadow-sm;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &__body {
+    padding: a.$spacing-xl;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-md;
+    height: 100%;
+  }
+
+  &__title {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    line-height: a.$line-height-tight;
+  }
+
+  &__text {
+    color: a.$color-muted;
+    line-height: a.$line-height-normal;
+    flex: 1;
+  }
+
+  &__media {
+    overflow: hidden;
+    border-radius: a.$radius-md;
+    border: 1px solid a.$color-border;
+    aspect-ratio: 16 / 9;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.blog-widget {
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-lg;
+  box-shadow: a.$shadow-sm;
+  padding: a.$spacing-xl;
+
+  &__title {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-md;
+  }
+
+  &__text {
+    color: a.$color-muted;
+    line-height: a.$line-height-normal;
+    margin-bottom: a.$spacing-md;
+  }
+
+  &__list {
+    display: grid;
+    gap: a.$spacing-sm;
+  }
+
+  &__link {
+    display: block;
+    padding: a.$spacing-sm a.$spacing-md;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+    color: a.$color-text;
+    transition: a.$transition-fast;
+
+    &:hover {
+      background-color: rgba(a.$color-primary, 0.08);
+      color: a.$color-primary;
+    }
+  }
+}
+
+.newsletter-form {
+  display: grid;
+  gap: a.$spacing-md;
+
+  &__field {
+    width: 100%;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+    color: a.$color-text;
+    padding: 12px a.$spacing-md;
+    transition: a.$transition-fast;
+
+    &:focus {
+      outline: none;
+      border-color: a.$color-primary;
+      box-shadow: 0 0 0 3px rgba(a.$color-primary, 0.12);
+      background-color: a.$color-white;
+    }
+  }
+}

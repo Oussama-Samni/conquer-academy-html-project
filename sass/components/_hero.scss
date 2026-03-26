@@ -1,0 +1,55 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Hero
+// ================================
+
+.hero {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-3xl 0;
+
+  @include a.respond-to(desktop) {
+    padding: 120px 0;
+  }
+
+  &__content {
+    max-width: 640px;
+  }
+
+  &__title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    line-height: a.$line-height-tight;
+    margin-bottom: a.$spacing-md;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-3xl;
+    }
+  }
+
+  &__highlight {
+    color: a.$color-secondary;
+  }
+
+  &__subtitle {
+    font-size: a.$font-size-base;
+    color: rgba(a.$color-white, 0.7);
+    line-height: a.$line-height-normal;
+    margin-bottom: a.$spacing-xl;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-md;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-sm;
+
+    @include a.respond-to(tablet) {
+      flex-direction: row;
+    }
+  }
+}

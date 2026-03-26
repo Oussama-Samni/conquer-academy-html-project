@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fullstack Developer Bootcamp - Conquer Academy</title>
+  <meta name="description" content="Bootcamp intensivo de 12 meses para convertirte en Fullstack Developer. Domina frontend, backend, bases de datos y DevOps. Garantia de empleo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.png" sizes="any">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="/img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
+        <nav class="nav" aria-label="Navegacion principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
+            <li class="nav__item">
+              <details class="nav__dropdown">
+                <summary class="nav__link">Cursos</summary>
+                <ul class="nav__submenu">
+                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
+                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
+                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
+                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
+                </ul>
+              </details>
+            </li>
+            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
+            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+          </ul>
+          <div class="nav__auth">
+            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
+            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+          </div>
+        </nav>
+        <div class="header__actions">
+          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-home">← Inicio</a>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+      <div class="container">
+        <h1 class="course-hero__title">Fullstack Developer Bootcamp</h1>
+        <div class="course-hero__meta">
+          <span class="course-hero__pill">12 meses · 800+ horas</span>
+          <span class="course-hero__pill">Online en vivo</span>
+          <span class="course-hero__pill course-hero__pill--price">4.999 EUR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Layout -->
+    <div class="container">
+      <div class="course-layout">
+
+        <!-- Main Content -->
+        <div class="course-layout__main">
+
+          <section class="course-section">
+            <h2 class="course-section__title">Descripcion del programa</h2>
+            <p>El Fullstack Developer Bootcamp es nuestro programa mas completo y demandado. En 12 meses intensivos, te transformaras de principiante a desarrollador fullstack profesional, capaz de construir aplicaciones web completas desde cero.</p>
+            <p>Aprenderas a dominar tanto el frontend (lo que ve el usuario) como el backend (la logica del servidor), bases de datos, y las herramientas de DevOps necesarias para desplegar y mantener aplicaciones en produccion.</p>
+            <p>Al finalizar, tendras un portfolio con 8+ proyectos reales y estaras preparado para trabajar como desarrollador fullstack en cualquier empresa tecnologica.</p>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Por que elegir este bootcamp</h2>
+            <ul class="benefits-list">
+              <li class="benefits-list__item"><strong>Garantia de empleo:</strong> Si no consigues trabajo en 6 meses, te devolvemos el dinero</li>
+              <li class="benefits-list__item"><strong>Clases en vivo:</strong> Aprende en tiempo real con instructores expertos</li>
+              <li class="benefits-list__item"><strong>Mentoria 1:1:</strong> Sesiones personalizadas para resolver tus dudas</li>
+              <li class="benefits-list__item"><strong>Proyectos reales:</strong> Construye tu portfolio con aplicaciones de nivel profesional</li>
+              <li class="benefits-list__item"><strong>Bolsa de empleo:</strong> Acceso a nuestra red de +200 empresas colaboradoras</li>
+              <li class="benefits-list__item"><strong>Comunidad:</strong> Conecta con +5000 alumnos y egresados</li>
+            </ul>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Temario completo</h2>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 1: Fundamentos Web (4 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Construye una base solida en las tecnologias fundamentales de la web.</p>
+                  <ul>
+                    <li>HTML5 semantico y accesibilidad</li>
+                    <li>CSS3: Flexbox, Grid, responsive design</li>
+                    <li>Git y GitHub: control de versiones</li>
+                    <li>Linea de comandos y herramientas de desarrollo</li>
+                    <li><strong>Proyecto:</strong> Portfolio personal responsive</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 2: JavaScript Moderno (6 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Domina el lenguaje de programacion mas importante de la web.</p>
+                  <ul>
+                    <li>JavaScript ES6+: variables, funciones, arrays, objetos</li>
+                    <li>Programacion asincrona: Promises, async/await</li>
+                    <li>Manipulacion del DOM y eventos</li>
+                    <li>Fetch API y consumo de APIs REST</li>
+                    <li>Introduccion a TypeScript</li>
+                    <li><strong>Proyecto:</strong> Aplicacion de gestion de tareas</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 3: React y Frontend Avanzado (8 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Aprende el framework frontend mas demandado del mercado.</p>
+                  <ul>
+                    <li>React: componentes, props, state, hooks</li>
+                    <li>React Router y navegacion SPA</li>
+                    <li>Estado global con Context API y Redux</li>
+                    <li>Testing con Jest y React Testing Library</li>
+                    <li><strong>Proyecto:</strong> Clon de e-commerce (frontend)</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 4: Node.js y Backend (8 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Construye servidores robustos y APIs profesionales.</p>
+                  <ul>
+                    <li>Node.js: fundamentos y modulos</li>
+                    <li>Express.js: routing, middleware, MVC</li>
+                    <li>APIs REST: diseno, documentacion, versionado</li>
+                    <li>Autenticacion: JWT, OAuth, sesiones</li>
+                    <li><strong>Proyecto:</strong> API REST completa para el e-commerce</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 5: Bases de Datos (6 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Aprende a disenar y gestionar bases de datos relacionales y NoSQL.</p>
+                  <ul>
+                    <li>SQL y PostgreSQL: queries, joins, indices</li>
+                    <li>MongoDB: documentos, agregaciones, indices</li>
+                    <li>ORMs: Prisma, Mongoose</li>
+                    <li>Redis: cache y sesiones</li>
+                    <li><strong>Proyecto:</strong> Integracion de base de datos en el e-commerce</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 6: DevOps y Cloud (4 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Despliega y mantiene aplicaciones en produccion.</p>
+                  <ul>
+                    <li>Docker: contenedores, imagenes, docker-compose</li>
+                    <li>CI/CD: GitHub Actions, automatizacion</li>
+                    <li>AWS: EC2, S3, RDS, Lambda</li>
+                    <li><strong>Proyecto:</strong> Despliegue del e-commerce en AWS</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 7: Proyecto Final (8 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Desarrolla una aplicacion completa de nivel profesional.</p>
+                  <ul>
+                    <li>Planificacion y arquitectura del proyecto</li>
+                    <li>Desarrollo en equipo con metodologias agiles</li>
+                    <li>Presentacion ante empresas colaboradoras</li>
+                    <li><strong>Proyecto:</strong> Aplicacion fullstack completa (a elegir)</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 8: Preparacion Laboral (4 semanas)</summary>
+                <div class="accordion__body">
+                  <ul>
+                    <li>Optimizacion de CV y LinkedIn</li>
+                    <li>Preparacion de entrevistas tecnicas</li>
+                    <li>Practicas de algoritmos y estructuras de datos</li>
+                    <li>Sesiones de mock interviews con recruiters</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Tecnologias que dominaras</h2>
+            <table class="tech-table">
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Tecnologias</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Frontend</td><td>HTML5, CSS3, JavaScript, TypeScript, React, Next.js</td></tr>
+                <tr><td>Backend</td><td>Node.js, Express, APIs REST, GraphQL</td></tr>
+                <tr><td>Bases de datos</td><td>PostgreSQL, MongoDB, Redis, Prisma</td></tr>
+                <tr><td>DevOps</td><td>Git, Docker, GitHub Actions, AWS</td></tr>
+                <tr><td>Testing</td><td>Jest, React Testing Library, Cypress</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Requisitos de admision</h2>
+            <ul class="req-list">
+              <li>No se requieren conocimientos previos de programacion</li>
+              <li>Ordenador con minimo 8GB RAM y conexion a internet estable</li>
+              <li>Disponibilidad de 20-25 horas semanales</li>
+              <li>Motivacion y compromiso para completar el programa</li>
+              <li>Superar la entrevista de admision</li>
+            </ul>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Equipo de instructores</h2>
+            <div class="instructors">
+              <article class="instructor">
+                <h3 class="instructor__name">Maria Garcia — Lead Instructor</h3>
+                <p class="instructor__bio">Ex-ingeniera en Google y Spotify. 15 anos de experiencia en desarrollo fullstack. Especialista en arquitectura de sistemas y escalabilidad.</p>
+              </article>
+              <article class="instructor">
+                <h3 class="instructor__name">Carlos Rodriguez — Frontend Lead</h3>
+                <p class="instructor__bio">Desarrollador senior en Vercel. Contribuidor de React. Experto en performance y accesibilidad web.</p>
+              </article>
+              <article class="instructor">
+                <h3 class="instructor__name">Ana Martinez — Backend Lead</h3>
+                <p class="instructor__bio">Ex-arquitecta de software en Amazon. Especialista en Node.js, bases de datos y sistemas distribuidos.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Preguntas frecuentes</h2>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary class="accordion__summary">Puedo compaginar el bootcamp con mi trabajo?</summary>
+                <div class="accordion__body">
+                  <p>Si, el programa esta disenado para personas que trabajan. Las clases en vivo son por la tarde/noche y los fines de semana. Necesitaras dedicar unas 20-25 horas semanales.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Que pasa si no consigo trabajo al terminar?</summary>
+                <div class="accordion__body">
+                  <p>Ofrecemos garantia de empleo. Si no consigues trabajo en 6 meses tras graduarte, te devolvemos el 100% del importe pagado.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Puedo empezar sin saber programar?</summary>
+                <div class="accordion__body">
+                  <p>Absolutamente. El bootcamp esta disenado para principiantes. Empezamos desde cero y te acompanamos en cada paso.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Que tipo de trabajos podre conseguir?</summary>
+                <div class="accordion__body">
+                  <p>Nuestros egresados trabajan como: Fullstack Developer, Frontend Developer, Backend Developer, Software Engineer. El salario medio de entrada es de 28.000-35.000 EUR/ano.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <div class="course-layout__back">
+            <a href="cursos.html" class="btn btn--outline">← Ver todos los programas</a>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="course-layout__sidebar">
+          <div class="course-sidebar">
+            <p class="course-sidebar__price">4.999 EUR</p>
+            <p class="course-sidebar__note">financiacion disponible</p>
+            <div class="course-sidebar__actions">
+              <a href="registro.html" class="btn btn--primary">Solicitar plaza</a>
+              <a href="contacto.html" class="btn btn--ghost">Agendar llamada</a>
+            </div>
+            <dl class="course-sidebar__info">
+              <dt>Proxima convocatoria</dt>
+              <dd>15 de febrero de 2026</dd>
+              <dt>Plazas disponibles</dt>
+              <dd>25</dd>
+            </dl>
+            <div class="course-sidebar__payment">
+              <h4 class="course-sidebar__subtitle">Opciones de pago</h4>
+              <ul>
+                <li>Pago al contado: <strong>4.499 EUR</strong> (10% dto.)</li>
+                <li>12 cuotas: <strong>416 EUR/mes</strong></li>
+                <li>24 cuotas: <strong>229 EUR/mes</strong></li>
+                <li>ISA: <strong>no pagas hasta conseguir empleo</strong></li>
+              </ul>
+            </div>
+            <div class="course-sidebar__scholarships">
+              <h4 class="course-sidebar__subtitle">Becas disponibles</h4>
+              <ul>
+                <li>Mujer en tech: <strong>30% dto.</strong></li>
+                <li>Diversidad: <strong>25% dto.</strong></li>
+                <li>Desempleo: <strong>40% dto.</strong></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
+        <nav class="footer__nav" aria-label="Pie de pagina">
+          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>

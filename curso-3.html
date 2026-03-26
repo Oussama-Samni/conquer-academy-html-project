@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend Developer Bootcamp - Conquer Academy</title>
+  <meta name="description" content="Bootcamp de 6 meses para convertirte en Frontend Developer. Domina HTML, CSS, JavaScript, React y Next.js. Garantia de empleo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.png" sizes="any">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="/img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
+        <nav class="nav" aria-label="Navegacion principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
+            <li class="nav__item">
+              <details class="nav__dropdown">
+                <summary class="nav__link">Cursos</summary>
+                <ul class="nav__submenu">
+                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
+                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
+                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
+                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
+                </ul>
+              </details>
+            </li>
+            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
+            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+          </ul>
+          <div class="nav__auth">
+            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
+            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+          </div>
+        </nav>
+        <div class="header__actions">
+          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-home">← Inicio</a>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+      <div class="container">
+        <h1 class="course-hero__title">Frontend Developer Bootcamp</h1>
+        <div class="course-hero__meta">
+          <span class="course-hero__pill">6 meses · 400+ horas</span>
+          <span class="course-hero__pill">Online en vivo</span>
+          <span class="course-hero__pill course-hero__pill--price">2.999 EUR</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Layout -->
+    <div class="container">
+      <div class="course-layout">
+
+        <!-- Main Content -->
+        <div class="course-layout__main">
+
+          <section class="course-section">
+            <h2 class="course-section__title">Descripcion del programa</h2>
+            <p>El Frontend Developer Bootcamp te ensenara a crear interfaces web modernas, accesibles y de alto rendimiento. En 6 meses intensivos, pasaras de conocer los fundamentos de HTML y CSS a dominar React y Next.js como un profesional.</p>
+            <p>Aprenderas a pensar en terminos de componentes, a manejar el estado de las aplicaciones y a optimizar la experiencia de usuario en cualquier dispositivo.</p>
+            <p>Al finalizar, tendras un portfolio solido con proyectos reales y estras listo para trabajar como frontend developer en cualquier empresa de tecnologia.</p>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Por que elegir este bootcamp</h2>
+            <ul class="benefits-list">
+              <li class="benefits-list__item"><strong>Garantia de empleo:</strong> Si no consigues trabajo en 6 meses, te devolvemos el dinero</li>
+              <li class="benefits-list__item"><strong>Accesibilidad web:</strong> Aprendes WCAG y ARIA desde el principio</li>
+              <li class="benefits-list__item"><strong>Diseno incluido:</strong> Nociones de UI/UX para trabajar con disenadores</li>
+              <li class="benefits-list__item"><strong>Performance first:</strong> Optimizacion de carga y Core Web Vitals</li>
+              <li class="benefits-list__item"><strong>Proyectos reales:</strong> Portfolio con aplicaciones de nivel profesional</li>
+              <li class="benefits-list__item"><strong>Mentoria 1:1:</strong> Sesiones personalizadas con instructores expertos</li>
+            </ul>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Temario completo</h2>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 1: HTML y CSS Profesional (4 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Los cimientos de cualquier interfaz web.</p>
+                  <ul>
+                    <li>HTML5 semantico y accesibilidad (WCAG, ARIA)</li>
+                    <li>CSS3 moderno: Custom Properties, Cascade Layers</li>
+                    <li>Flexbox y CSS Grid a fondo</li>
+                    <li>Responsive design y mobile-first</li>
+                    <li>Animaciones y transiciones CSS</li>
+                    <li><strong>Proyecto:</strong> Landing page responsive accesible</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 2: JavaScript para el Frontend (5 semanas)</summary>
+                <div class="accordion__body">
+                  <p>El lenguaje que da vida a las interfaces.</p>
+                  <ul>
+                    <li>JavaScript ES6+: destructuring, spread, modules</li>
+                    <li>Manipulacion del DOM y eventos</li>
+                    <li>Programacion asincrona: Promises, async/await</li>
+                    <li>Fetch API y consumo de REST APIs</li>
+                    <li>Introduccion a TypeScript</li>
+                    <li><strong>Proyecto:</strong> App de clima con geolocalización</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 3: React Fundamentos (5 semanas)</summary>
+                <div class="accordion__body">
+                  <p>El framework mas demandado para construir interfaces.</p>
+                  <ul>
+                    <li>Componentes, props y estado</li>
+                    <li>Hooks: useState, useEffect, useContext</li>
+                    <li>React Router y navegacion SPA</li>
+                    <li>Formularios y validacion</li>
+                    <li>Consumo de APIs desde React</li>
+                    <li><strong>Proyecto:</strong> App de gestion de tareas con React</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 4: React Avanzado y Next.js (5 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Lleva tus aplicaciones al siguiente nivel.</p>
+                  <ul>
+                    <li>Estado global con Context API y Zustand</li>
+                    <li>Custom hooks y patrones avanzados</li>
+                    <li>Next.js: SSR, SSG, App Router</li>
+                    <li>Tailwind CSS para estilos rapidos</li>
+                    <li>Optimizacion de rendimiento (lazy loading, memoization)</li>
+                    <li><strong>Proyecto:</strong> Blog con Next.js y CMS headless</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 5: Testing y Calidad (3 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Escribe codigo que funciona y se puede mantener.</p>
+                  <ul>
+                    <li>Testing con Jest y React Testing Library</li>
+                    <li>E2E con Cypress</li>
+                    <li>Accesibilidad automatizada con axe</li>
+                    <li>Code reviews y buenas practicas</li>
+                    <li><strong>Proyecto:</strong> Suite de tests para el proyecto anterior</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Modulo 6: Proyecto Final y Empleabilidad (4 semanas)</summary>
+                <div class="accordion__body">
+                  <p>Construye tu proyecto estrella y prepara tu entrada al mercado laboral.</p>
+                  <ul>
+                    <li>Proyecto frontend completo con Next.js</li>
+                    <li>Despliegue en Vercel y optimizacion</li>
+                    <li>Optimizacion de CV y perfil de LinkedIn</li>
+                    <li>Mock interviews tecnicas</li>
+                    <li><strong>Proyecto:</strong> Portfolio profesional + app final</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Tecnologias que dominaras</h2>
+            <table class="tech-table">
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>Tecnologias</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Fundamentos</td><td>HTML5, CSS3, JavaScript ES6+, TypeScript</td></tr>
+                <tr><td>Frameworks</td><td>React, Next.js, Tailwind CSS</td></tr>
+                <tr><td>Estado</td><td>Context API, Zustand, React Query</td></tr>
+                <tr><td>Testing</td><td>Jest, React Testing Library, Cypress</td></tr>
+                <tr><td>Herramientas</td><td>Git, Vite, Webpack, Storybook</td></tr>
+                <tr><td>Despliegue</td><td>Vercel, Netlify, GitHub Actions</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Requisitos de admision</h2>
+            <ul class="req-list">
+              <li>No se requieren conocimientos previos de programacion</li>
+              <li>Interes por el diseno visual y la experiencia de usuario</li>
+              <li>Ordenador con minimo 8GB RAM y conexion a internet estable</li>
+              <li>Disponibilidad de 15-20 horas semanales</li>
+              <li>Superar la entrevista de admision</li>
+            </ul>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Equipo de instructores</h2>
+            <div class="instructors">
+              <article class="instructor">
+                <h3 class="instructor__name">Carlos Rodriguez — Lead Instructor</h3>
+                <p class="instructor__bio">Desarrollador senior en Vercel. Contribuidor de React. Experto en performance y accesibilidad web con mas de 10 anos de experiencia.</p>
+              </article>
+              <article class="instructor">
+                <h3 class="instructor__name">Sofia Morales — CSS y Diseno Lead</h3>
+                <p class="instructor__bio">Ex-disenadora frontend en Airbnb. Especialista en CSS avanzado, sistemas de diseno y accesibilidad. Ponente en conferencias internacionales de frontend.</p>
+              </article>
+              <article class="instructor">
+                <h3 class="instructor__name">Pablo Fernandez — React Lead</h3>
+                <p class="instructor__bio">Senior Frontend Engineer en Notion. Experto en arquitectura de aplicaciones React, optimizacion de rendimiento y patrones avanzados.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="course-section">
+            <h2 class="course-section__title">Preguntas frecuentes</h2>
+            <div class="accordion">
+              <details class="accordion__item">
+                <summary class="accordion__summary">Es necesario saber disenar para ser frontend developer?</summary>
+                <div class="accordion__body">
+                  <p>No. El frontend developer traduce disenos a codigo; no los crea desde cero. Te ensenamos a interpretar y colaborar con disenadores, pero no necesitas saber Figma o Photoshop.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Cual es la diferencia con el Fullstack Bootcamp?</summary>
+                <div class="accordion__body">
+                  <p>El Frontend Bootcamp se especializa exclusivamente en interfaces: HTML, CSS, JavaScript y React. No incluye backend ni bases de datos. Es ideal si quieres especializarte en la parte visual e interactiva de las aplicaciones.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Aprenderemos React o Vue o Angular?</summary>
+                <div class="accordion__body">
+                  <p>Nos centramos en React, que es el framework mas demandado del mercado. Una vez que dominas React, aprender Vue o Angular es mucho mas facil — los conceptos son similares.</p>
+                </div>
+              </details>
+              <details class="accordion__item">
+                <summary class="accordion__summary">Que salario puedo esperar al terminar?</summary>
+                <div class="accordion__body">
+                  <p>Nuestros egresados trabajan como Frontend Developer con salarios de entrada entre 25.000 y 38.000 EUR/ano en Espana. Los perfiles con experiencia en Next.js y TypeScript suelen estar en el rango alto.</p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <div class="course-layout__back">
+            <a href="cursos.html" class="btn btn--outline">← Ver todos los programas</a>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="course-layout__sidebar">
+          <div class="course-sidebar">
+            <p class="course-sidebar__price">2.999 EUR</p>
+            <p class="course-sidebar__note">lista de espera abierta</p>
+            <div class="course-sidebar__actions">
+              <a href="contacto.html" class="btn btn--primary">Apuntarme a la lista</a>
+              <a href="contacto.html" class="btn btn--ghost">Agendar llamada</a>
+            </div>
+            <dl class="course-sidebar__info">
+              <dt>Estado</dt>
+              <dd>Proximamente</dd>
+              <dt>Duracion</dt>
+              <dd>6 meses · 400+ horas</dd>
+            </dl>
+            <div class="course-sidebar__payment">
+              <h4 class="course-sidebar__subtitle">Opciones de pago</h4>
+              <ul>
+                <li>Pago al contado: <strong>2.699 EUR</strong> (10% dto.)</li>
+                <li>12 cuotas: <strong>250 EUR/mes</strong></li>
+                <li>18 cuotas: <strong>180 EUR/mes</strong></li>
+                <li>ISA: <strong>no pagas hasta conseguir empleo</strong></li>
+              </ul>
+            </div>
+            <div class="course-sidebar__scholarships">
+              <h4 class="course-sidebar__subtitle">Becas disponibles</h4>
+              <ul>
+                <li>Mujer en tech: <strong>30% dto.</strong></li>
+                <li>Diversidad: <strong>25% dto.</strong></li>
+                <li>Desempleo: <strong>40% dto.</strong></li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
+        <nav class="footer__nav" aria-label="Pie de pagina">
+          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>

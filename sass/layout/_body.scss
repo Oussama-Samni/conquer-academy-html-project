@@ -1,0 +1,10 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Body
+// ================================
+
+body {
+  background-color: a.$color-bg;
+  color: a.$color-text;
+}

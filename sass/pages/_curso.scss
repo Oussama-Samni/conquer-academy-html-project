@@ -1,0 +1,414 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Back Home Button
+// ================================
+
+.back-home {
+  display: inline-block;
+  position: fixed;
+  top: 80px;
+  left: a.$spacing-md;
+  z-index: a.$z-dropdown;
+  font-size: a.$font-size-sm;
+  font-weight: a.$font-weight-medium;
+  color: a.$color-white;
+  background-color: rgba(a.$color-white, 0.1);
+  border: 1px solid rgba(a.$color-white, 0.15);
+  backdrop-filter: blur(8px);
+  padding: a.$spacing-xs a.$spacing-md;
+  border-radius: a.$radius-full;
+  transition: a.$transition-fast;
+
+  &:hover {
+    background-color: rgba(a.$color-white, 0.2);
+    border-color: rgba(a.$color-white, 0.3);
+  }
+}
+
+// ================================
+// Course Hero
+// ================================
+
+.course-hero {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-3xl 0 a.$spacing-2xl;
+
+  @include a.respond-to(desktop) {
+    padding: 100px 0 a.$spacing-3xl;
+  }
+
+  &__title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-md;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-3xl;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: a.$spacing-sm;
+  }
+
+  &__pill {
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-medium;
+    padding: a.$spacing-xs a.$spacing-md;
+    border-radius: a.$radius-full;
+    background-color: rgba(a.$color-white, 0.08);
+    color: rgba(a.$color-white, 0.8);
+
+    &--price {
+      background-color: a.$color-primary;
+      color: a.$color-white;
+    }
+  }
+}
+
+// ================================
+// Course Layout (two columns)
+// ================================
+
+.course-layout {
+  display: grid;
+  gap: a.$spacing-2xl;
+  padding: a.$spacing-3xl 0;
+
+  @include a.respond-to(desktop) {
+    grid-template-columns: 1fr 340px;
+    align-items: start;
+  }
+
+  &__back {
+    margin-top: a.$spacing-2xl;
+  }
+
+  &__sidebar {
+    @include a.respond-to(desktop) {
+      position: sticky;
+      top: 96px;
+    }
+  }
+}
+
+// ================================
+// Course Section
+// ================================
+
+.course-section {
+  margin-bottom: a.$spacing-3xl;
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-md;
+    padding-bottom: a.$spacing-sm;
+    border-bottom: 2px solid a.$color-border;
+  }
+
+  p {
+    color: a.$color-text;
+    line-height: a.$line-height-normal;
+    margin-bottom: a.$spacing-md;
+  }
+}
+
+// ================================
+// Benefits List
+// ================================
+
+.benefits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-sm;
+
+  &__item {
+    font-size: a.$font-size-base;
+    color: a.$color-text;
+    line-height: a.$line-height-normal;
+    padding: a.$spacing-sm a.$spacing-md;
+    background-color: a.$color-white;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    border-left: 3px solid a.$color-accent;
+  }
+}
+
+// ================================
+// Accordion
+// ================================
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-sm;
+
+  &__item {
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    overflow: hidden;
+
+    &[open] .accordion__summary {
+      background-color: a.$color-bg;
+
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__summary {
+    list-style: none;
+    cursor: pointer;
+    padding: a.$spacing-md a.$spacing-lg;
+    font-weight: a.$font-weight-medium;
+    color: a.$color-heading;
+    background-color: a.$color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color a.$transition-fast;
+    user-select: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '▾';
+      font-size: a.$font-size-sm;
+      color: a.$color-muted;
+      transition: transform a.$transition-fast;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      background-color: a.$color-bg;
+    }
+  }
+
+  &__body {
+    padding: a.$spacing-md a.$spacing-lg;
+    border-top: 1px solid a.$color-border;
+    background-color: a.$color-white;
+
+    p {
+      color: a.$color-muted;
+      font-size: a.$font-size-sm;
+      margin-bottom: a.$spacing-sm;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: a.$spacing-lg;
+      display: flex;
+      flex-direction: column;
+      gap: a.$spacing-xs;
+
+      li {
+        font-size: a.$font-size-sm;
+        color: a.$color-text;
+        line-height: a.$line-height-normal;
+      }
+    }
+  }
+}
+
+// ================================
+// Tech Table
+// ================================
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: a.$font-size-sm;
+
+  thead {
+    background-color: a.$color-bg-dark;
+
+    th {
+      padding: a.$spacing-sm a.$spacing-md;
+      text-align: left;
+      font-weight: a.$font-weight-bold;
+      color: a.$color-white;
+      font-size: a.$font-size-sm;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid a.$color-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(even) {
+        background-color: a.$color-bg;
+      }
+    }
+
+    td {
+      padding: a.$spacing-sm a.$spacing-md;
+      color: a.$color-text;
+      line-height: a.$line-height-normal;
+
+      &:first-child {
+        font-weight: a.$font-weight-medium;
+        color: a.$color-heading;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+// ================================
+// Requirements List
+// ================================
+
+.req-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-sm;
+
+  li {
+    font-size: a.$font-size-base;
+    color: a.$color-text;
+    line-height: a.$line-height-normal;
+    padding-left: a.$spacing-lg;
+    position: relative;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: a.$color-primary;
+      font-weight: a.$font-weight-bold;
+    }
+  }
+}
+
+// ================================
+// Instructors
+// ================================
+
+.instructors {
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-lg;
+}
+
+.instructor {
+  padding: a.$spacing-lg;
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-md;
+  border-left: 3px solid a.$color-primary;
+
+  &__name {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-xs;
+  }
+
+  &__bio {
+    font-size: a.$font-size-sm;
+    color: a.$color-muted;
+    line-height: a.$line-height-normal;
+  }
+}
+
+// ================================
+// Course Sidebar
+// ================================
+
+.course-sidebar {
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-lg;
+  padding: a.$spacing-xl;
+  box-shadow: a.$shadow-md;
+  display: flex;
+  flex-direction: column;
+  gap: a.$spacing-lg;
+
+  &__price {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin: 0;
+  }
+
+  &__note {
+    font-size: a.$font-size-sm;
+    color: a.$color-muted;
+    margin: 0;
+    margin-top: -(a.$spacing-md);
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-sm;
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: a.$spacing-xs a.$spacing-md;
+    font-size: a.$font-size-sm;
+    margin: 0;
+
+    dt {
+      color: a.$color-muted;
+    }
+
+    dd {
+      font-weight: a.$font-weight-medium;
+      color: a.$color-heading;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    font-size: a.$font-size-base;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin: 0 0 a.$spacing-sm;
+  }
+
+  &__payment,
+  &__scholarships {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: a.$spacing-xs;
+
+      li {
+        font-size: a.$font-size-sm;
+        color: a.$color-text;
+      }
+    }
+  }
+}

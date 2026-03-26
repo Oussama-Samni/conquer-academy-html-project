@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+// ================================
+// px to rem
+// ================================
+// Converts px to rem based on a 16px root font size
+// Usage: font-size: rem(24px);  →  1.5rem
+
+@function rem($px) {
+  @return calc($px / 16px) * 1rem;
+}
+
+// ================================
+// Spacing shorthand
+// ================================
+// Returns a spacing value from the scale
+// Usage: padding: space(md);  →  16px
+
+@function space($size) {
+  $scale: (
+    'xs':  $spacing-xs,
+    'sm':  $spacing-sm,
+    'md':  $spacing-md,
+    'lg':  $spacing-lg,
+    'xl':  $spacing-xl,
+    '2xl': $spacing-2xl,
+    '3xl': $spacing-3xl
+  );
+  @return map-get($scale, $size);
+}

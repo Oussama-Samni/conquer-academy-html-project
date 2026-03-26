@@ -1,0 +1,342 @@
+@use '../abstracts/abstracts' as a;
+
+.contact-page {
+  padding-bottom: a.$spacing-3xl;
+
+  &__hero {
+    background-color: a.$color-bg-dark;
+    padding: a.$spacing-2xl 0;
+
+    @include a.respond-to(desktop) {
+      padding: a.$spacing-3xl 0;
+    }
+  }
+
+  &__hero-inner {
+    width: 100%;
+    max-width: a.$bp-wide;
+    margin-inline: auto;
+    padding-inline: a.$spacing-md;
+
+    @include a.respond-to(tablet) {
+      padding-inline: a.$spacing-lg;
+    }
+  }
+
+  &__hero-title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-sm;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-3xl;
+    }
+  }
+
+  &__hero-subtitle {
+    font-size: a.$font-size-base;
+    color: rgba(a.$color-white, 0.65);
+    max-width: 680px;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-md;
+      max-width: 760px;
+    }
+  }
+
+  &__content {
+    padding: a.$spacing-3xl 0;
+  }
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-xl;
+
+    @include a.respond-to(desktop) {
+      grid-template-columns: minmax(0, 1.45fr) 360px;
+      align-items: start;
+      gap: a.$spacing-2xl;
+    }
+  }
+
+  &__main,
+  &__sidebar {
+    display: grid;
+    gap: a.$spacing-xl;
+  }
+
+  &__sidebar {
+    @include a.respond-to(desktop) {
+      position: sticky;
+      top: 112px;
+    }
+  }
+
+  &__map,
+  &__faq {
+    margin-top: a.$spacing-xl;
+
+    @include a.respond-to(desktop) {
+      margin-top: 0;
+    }
+  }
+}
+
+.contact-card {
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-lg;
+  box-shadow: a.$shadow-sm;
+  padding: a.$spacing-xl;
+
+  @include a.respond-to(desktop) {
+    padding: a.$spacing-2xl;
+  }
+
+  & + & {
+    margin-top: a.$spacing-xl;
+  }
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__text {
+    color: a.$color-muted;
+    margin-bottom: a.$spacing-lg;
+  }
+}
+
+.contact-form {
+  display: grid;
+  gap: a.$spacing-lg;
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-md;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include a.respond-to(desktop) {
+      gap: a.$spacing-lg;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-xs;
+
+    &--full {
+      @include a.respond-to(tablet) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__label,
+  &__legend {
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-medium;
+    color: a.$color-heading;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    width: 100%;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+    color: a.$color-text;
+    padding: a.$spacing-sm a.$spacing-md;
+    transition: a.$transition-fast;
+
+    &:focus {
+      outline: none;
+      border-color: a.$color-primary;
+      box-shadow: 0 0 0 3px rgba(a.$color-primary, 0.12);
+      background-color: a.$color-white;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 44px;
+    background-image:
+      linear-gradient(45deg, transparent 50%, a.$color-muted 50%),
+      linear-gradient(135deg, a.$color-muted 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(50% - 3px),
+      calc(100% - 14px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+
+    &:hover {
+      border-color: rgba(a.$color-primary, 0.5);
+      background-color: a.$color-white;
+    }
+  }
+
+  &__textarea {
+    min-height: 180px;
+    resize: vertical;
+
+    @include a.respond-to(desktop) {
+      min-height: 220px;
+    }
+  }
+
+  &__urgency {
+    display: grid;
+    gap: a.$spacing-sm;
+    padding: a.$spacing-md;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+  }
+
+  &__choice,
+  &__consent {
+    display: flex;
+    align-items: flex-start;
+    gap: a.$spacing-sm;
+    color: a.$color-text;
+    font-size: a.$font-size-sm;
+  }
+
+  &__choice input,
+  &__consent input {
+    margin-top: 2px;
+    accent-color: a.$color-primary;
+  }
+
+  &__meta {
+    font-size: a.$font-size-sm;
+    color: a.$color-muted;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: a.$spacing-md;
+    align-items: center;
+  }
+
+  a {
+    color: a.$color-primary;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.contact-info {
+  display: grid;
+  gap: a.$spacing-md;
+
+  &__item {
+    padding: a.$spacing-md;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+  }
+
+  &__heading {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__list {
+    display: grid;
+    gap: a.$spacing-xs;
+    color: a.$color-text;
+  }
+
+  p,
+  li {
+    color: a.$color-text;
+  }
+}
+
+.contact-map {
+  &__address {
+    color: a.$color-text;
+    margin-bottom: a.$spacing-lg;
+    font-style: normal;
+  }
+
+  &__frame {
+    overflow: hidden;
+    border-radius: a.$radius-lg;
+    border: 1px solid a.$color-border;
+    box-shadow: a.$shadow-sm;
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 400px;
+
+    @include a.respond-to(desktop) {
+      min-height: 460px;
+    }
+  }
+}
+
+.contact-faq {
+  display: grid;
+  gap: a.$spacing-md;
+
+  &__item {
+    background-color: a.$color-white;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    overflow: hidden;
+
+    &[open] .contact-faq__question::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__question {
+    list-style: none;
+    cursor: pointer;
+    padding: a.$spacing-md a.$spacing-lg;
+    color: a.$color-heading;
+    font-weight: a.$font-weight-medium;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: a.$color-white;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '▾';
+      color: a.$color-muted;
+      transition: transform a.$transition-fast;
+    }
+  }
+
+  &__answer {
+    padding: 0 a.$spacing-lg a.$spacing-lg;
+    color: a.$color-muted;
+  }
+
+  a {
+    color: a.$color-primary;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}

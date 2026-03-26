@@ -1,0 +1,284 @@
+@use '../abstracts/abstracts' as a;
+
+.auth-page {
+  min-height: calc(100vh - 72px);
+  background-color: a.$color-bg;
+  padding: a.$spacing-2xl 0 a.$spacing-3xl;
+
+  &__shell {
+    display: grid;
+    gap: a.$spacing-xl;
+
+    @include a.respond-to(desktop) {
+      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+      align-items: start;
+    }
+  }
+
+  &--compact {
+    display: flex;
+    align-items: center;
+    background-color: a.$color-bg-dark;
+
+    .auth-page__shell {
+      width: 100%;
+      max-width: 460px;
+      margin: 0 auto;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.auth-panel {
+  background-color: a.$color-bg-dark;
+  border: 1px solid rgba(a.$color-secondary, 0.18);
+  border-radius: a.$radius-lg;
+  color: a.$color-white;
+  box-shadow: a.$shadow-lg;
+  overflow: hidden;
+
+  &__inner {
+    padding: a.$spacing-xl;
+    display: grid;
+    gap: a.$spacing-lg;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: a.$spacing-xs;
+    width: fit-content;
+    padding: 6px a.$spacing-sm;
+    border-radius: a.$radius-full;
+    background-color: rgba(a.$color-secondary, 0.12);
+    color: a.$color-secondary;
+    font-size: a.$font-size-xs;
+    font-weight: a.$font-weight-bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    line-height: a.$line-height-tight;
+  }
+
+  &__text {
+    color: rgba(a.$color-white, 0.72);
+    line-height: a.$line-height-normal;
+  }
+
+  &__list {
+    display: grid;
+    gap: a.$spacing-sm;
+  }
+
+  &__item {
+    display: flex;
+    gap: a.$spacing-sm;
+    color: rgba(a.$color-white, 0.82);
+    line-height: a.$line-height-normal;
+
+    &::before {
+      content: '✓';
+      color: a.$color-accent;
+      font-weight: a.$font-weight-bold;
+      flex-shrink: 0;
+    }
+  }
+
+  &__stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: a.$spacing-md;
+  }
+
+  &__stat {
+    padding: a.$spacing-md;
+    border-radius: a.$radius-md;
+    background-color: rgba(a.$color-white, 0.04);
+    border: 1px solid rgba(a.$color-secondary, 0.16);
+  }
+
+  &__stat-value {
+    display: block;
+    margin-bottom: 2px;
+    color: a.$color-white;
+    font-size: a.$font-size-lg;
+    font-weight: a.$font-weight-bold;
+  }
+
+  &__stat-label {
+    color: rgba(a.$color-white, 0.64);
+    font-size: a.$font-size-xs;
+  }
+}
+
+.auth-card {
+  background-color: a.$color-white;
+  border: 1px solid a.$color-border;
+  border-radius: a.$radius-lg;
+  box-shadow: a.$shadow-md;
+  overflow: hidden;
+
+  &__inner {
+    padding: a.$spacing-xl;
+    display: grid;
+    gap: a.$spacing-xl;
+  }
+
+  &__header {
+    display: grid;
+    gap: a.$spacing-sm;
+  }
+
+  &__title {
+    color: a.$color-heading;
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+  }
+
+  &__text {
+    color: a.$color-muted;
+    line-height: a.$line-height-normal;
+  }
+}
+
+.auth-form {
+  display: grid;
+  gap: a.$spacing-lg;
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-md;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-xs;
+
+    &--full {
+      @include a.respond-to(tablet) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: a.$spacing-md;
+    padding: a.$spacing-lg;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-lg;
+    background-color: a.$color-bg;
+  }
+
+  &__legend {
+    color: a.$color-heading;
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__label {
+    color: a.$color-heading;
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-medium;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    background-color: a.$color-bg;
+    color: a.$color-text;
+    padding: 12px a.$spacing-md;
+    transition: a.$transition-fast;
+
+    &:focus {
+      outline: none;
+      border-color: a.$color-primary;
+      box-shadow: 0 0 0 3px rgba(a.$color-primary, 0.12);
+      background-color: a.$color-white;
+    }
+  }
+
+  &__select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 44px;
+    background-image:
+      linear-gradient(45deg, transparent 50%, a.$color-muted 50%),
+      linear-gradient(135deg, a.$color-muted 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(50% - 3px),
+      calc(100% - 14px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+  }
+
+  &__checks {
+    display: grid;
+    gap: a.$spacing-sm;
+  }
+
+  &__choice {
+    display: flex;
+    align-items: flex-start;
+    gap: a.$spacing-sm;
+    color: a.$color-text;
+    font-size: a.$font-size-sm;
+
+    input {
+      margin-top: 2px;
+      accent-color: a.$color-primary;
+    }
+  }
+
+  &__hint,
+  &__meta {
+    color: a.$color-muted;
+    font-size: a.$font-size-sm;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: a.$spacing-md;
+    align-items: center;
+  }
+
+  a {
+    color: a.$color-primary;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+.auth-inline-card {
+  padding: a.$spacing-lg;
+  border-radius: a.$radius-lg;
+  background-color: a.$color-bg;
+  border: 1px solid a.$color-border;
+  display: grid;
+  gap: a.$spacing-sm;
+
+  &__title {
+    color: a.$color-heading;
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+  }
+
+  &__text {
+    color: a.$color-muted;
+  }
+}

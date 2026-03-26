@@ -1,0 +1,293 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Page Header (reusable inner-page hero)
+// ================================
+
+.page-header {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-2xl 0;
+
+  @include a.respond-to(desktop) {
+    padding: a.$spacing-3xl 0;
+  }
+
+  &__title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-sm;
+
+    @include a.respond-to(desktop) {
+      font-size: a.$font-size-3xl;
+    }
+  }
+
+  &__subtitle {
+    font-size: a.$font-size-base;
+    color: rgba(a.$color-white, 0.65);
+  }
+}
+
+// ================================
+// Features (why section)
+// ================================
+
+.features {
+  padding: a.$spacing-3xl 0;
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__intro {
+    color: a.$color-muted;
+    margin-bottom: a.$spacing-lg;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: a.$spacing-sm;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include a.respond-to(desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: a.$spacing-sm;
+    font-size: a.$font-size-sm;
+    color: a.$color-text;
+    padding: a.$spacing-md;
+    background-color: a.$color-white;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+
+    &::before {
+      content: '✓';
+      color: a.$color-accent;
+      font-weight: a.$font-weight-bold;
+      flex-shrink: 0;
+    }
+  }
+}
+
+// ================================
+// Course List
+// ================================
+
+.courses-list {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-3xl 0;
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-2xl;
+  }
+
+  &__grid {
+    display: grid;
+    gap: a.$spacing-lg;
+
+    @include a.respond-to(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// ================================
+// Course Card
+// ================================
+
+.course-card {
+  position: relative;
+  background-color: rgba(a.$color-white, 0.04);
+  border: 1px solid rgba(a.$color-white, 0.08);
+  border-radius: a.$radius-lg;
+  display: flex;
+  flex-direction: column;
+  transition: border-color a.$transition-fast;
+
+  &:hover {
+    border-color: rgba(a.$color-white, 0.2);
+  }
+
+  &--soon {
+    opacity: 0.75;
+  }
+
+  &__badge {
+    position: absolute;
+    top: a.$spacing-md;
+    right: a.$spacing-md;
+    padding: a.$spacing-xs a.$spacing-sm;
+    background-color: a.$color-accent;
+    color: a.$color-white;
+    font-size: a.$font-size-xs;
+    font-weight: a.$font-weight-bold;
+    border-radius: a.$radius-full;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: a.$spacing-xl;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-md;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: a.$spacing-sm;
+    flex-wrap: wrap;
+  }
+
+  &__duration,
+  &__mode {
+    font-size: a.$font-size-xs;
+    font-weight: a.$font-weight-medium;
+    padding: 2px a.$spacing-sm;
+    border-radius: a.$radius-full;
+  }
+
+  &__duration {
+    background-color: rgba(a.$color-primary, 0.2);
+    color: a.$color-secondary;
+  }
+
+  &__mode {
+    background-color: rgba(a.$color-white, 0.08);
+    color: rgba(a.$color-white, 0.65);
+  }
+
+  &__title {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+  }
+
+  &__text {
+    font-size: a.$font-size-sm;
+    color: rgba(a.$color-white, 0.65);
+    line-height: a.$line-height-normal;
+  }
+
+  &__tech {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-xs;
+
+    li {
+      font-size: a.$font-size-sm;
+      color: rgba(a.$color-white, 0.5);
+
+      strong {
+        color: rgba(a.$color-white, 0.8);
+      }
+    }
+  }
+
+  &__footer {
+    padding: a.$spacing-lg a.$spacing-xl;
+    border-top: 1px solid rgba(a.$color-white, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: a.$spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__price {
+    font-size: a.$font-size-md;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+
+    span {
+      display: block;
+      font-size: a.$font-size-xs;
+      font-weight: a.$font-weight-regular;
+      color: rgba(a.$color-white, 0.5);
+    }
+  }
+}
+
+// ================================
+// Financing
+// ================================
+
+.financing {
+  padding: a.$spacing-3xl 0;
+
+  &__title {
+    font-size: a.$font-size-xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-heading;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__subtitle {
+    color: a.$color-muted;
+    margin-bottom: a.$spacing-xl;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0 0 a.$spacing-xl;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-sm;
+  }
+
+  &__item {
+    font-size: a.$font-size-sm;
+    color: a.$color-text;
+    padding: a.$spacing-md a.$spacing-lg;
+    background-color: a.$color-white;
+    border: 1px solid a.$color-border;
+    border-radius: a.$radius-md;
+    border-left: 3px solid a.$color-primary;
+  }
+}
+
+// ================================
+// CTA
+// ================================
+
+.cta {
+  background-color: a.$color-bg-dark;
+  padding: a.$spacing-3xl 0;
+  text-align: center;
+
+  &__title {
+    font-size: a.$font-size-2xl;
+    font-weight: a.$font-weight-bold;
+    color: a.$color-white;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__subtitle {
+    color: rgba(a.$color-white, 0.65);
+    margin-bottom: a.$spacing-xl;
+  }
+}

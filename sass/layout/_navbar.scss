@@ -1,0 +1,211 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Navbar
+// ================================
+
+.nav {
+  // Mobile: hidden dropdown
+  display: none;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: a.$spacing-sm;
+  background-color: a.$color-bg-dark;
+  border-top: 1px solid rgba(a.$color-white, 0.08);
+  padding: a.$spacing-lg;
+
+  @include a.respond-to(desktop) {
+    display: grid;
+    position: static;
+    align-items: center;
+    flex: 1;
+    gap: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+  &__dropdown {
+    position: relative;
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: '▾';
+        margin-left: a.$spacing-xs;
+        display: inline-block;
+        transition: a.$transition-fast;
+      }
+    }
+
+    &[open] summary::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__submenu {
+    @extend %list-reset;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-xs;
+    padding: a.$spacing-xs 0 a.$spacing-xs a.$spacing-md;
+
+    @include a.respond-to(desktop) {
+      position: absolute;
+      top: calc(100% + a.$spacing-sm);
+      left: 0;
+      padding: a.$spacing-sm;
+      background-color: a.$color-bg-dark;
+      border: 1px solid rgba(a.$color-white, 0.08);
+      border-radius: a.$radius-md;
+      min-width: 220px;
+      box-shadow: a.$shadow-md;
+    }
+  }
+
+  &__sublink {
+    font-size: a.$font-size-sm;
+    color: rgba(a.$color-white, 0.65);
+    transition: a.$transition-fast;
+    white-space: nowrap;
+
+    &:hover {
+      color: a.$color-white;
+    }
+  }
+
+  &__list {
+    @extend %list-reset;
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-sm;
+
+    @include a.respond-to(desktop) {
+      flex-direction: row;
+      align-items: center;
+      gap: a.$spacing-lg;
+      grid-column: 2;
+      justify-self: center;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    flex-direction: column;
+    gap: a.$spacing-sm;
+
+    @include a.respond-to(desktop) {
+      flex-direction: row;
+      align-items: center;
+      grid-column: 3;
+      justify-self: end;
+      margin-left: 0;
+    }
+  }
+
+  &__link {
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-medium;
+    color: rgba(a.$color-white, 0.65);
+    letter-spacing: 0.01em;
+    transition: a.$transition-fast;
+
+    &:hover {
+      color: a.$color-white;
+    }
+
+    &--active {
+      color: a.$color-secondary;
+    }
+
+    &--cta {
+      color: a.$color-white;
+
+      @include a.respond-to(desktop) {
+        display: inline-block;
+        padding: a.$spacing-xs a.$spacing-md;
+        background-color: a.$color-primary;
+        color: a.$color-white;
+        border-radius: a.$radius-md;
+        font-weight: a.$font-weight-medium;
+        transition: a.$transition-fast;
+
+        &:hover {
+          background-color: a.$color-primary-hover;
+          color: a.$color-white;
+        }
+      }
+    }
+
+    &--ghost {
+      color: a.$color-white;
+
+      @include a.respond-to(desktop) {
+        display: inline-block;
+        padding: a.$spacing-xs a.$spacing-md;
+        background-color: transparent;
+        color: a.$color-white;
+        border: 1px solid rgba(a.$color-white, 0.3);
+        border-radius: a.$radius-md;
+        font-weight: a.$font-weight-medium;
+        transition: a.$transition-fast;
+
+        &:hover {
+          border-color: a.$color-white;
+          color: a.$color-white;
+        }
+      }
+    }
+  }
+
+  &__home-label {
+    @include a.respond-to(desktop) {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  }
+
+  &__home-icon {
+    display: none;
+
+    @include a.respond-to(desktop) {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      line-height: 1;
+      color: currentColor;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+// Mobile only: show nav when hamburger is checked
+@media (max-width: #{a.$bp-desktop - 1px}) {
+  .header__toggle-input:checked ~ .nav {
+    display: flex;
+  }
+}

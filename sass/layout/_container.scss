@@ -1,0 +1,21 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Container
+// ================================
+
+.container {
+  width: 100%;
+  max-width: a.$bp-wide;
+  margin-inline: auto;
+  padding-inline: a.$spacing-md;
+
+  @include a.respond-to(tablet) {
+    padding-inline: a.$spacing-lg;
+  }
+}
+
+.container--sm  { max-width: a.$bp-tablet; }
+.container--md  { max-width: a.$bp-desktop; }
+.container--lg  { max-width: a.$bp-wide; }
+.container--full { max-width: 100%; }

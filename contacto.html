@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - Conquer Academy</title>
+  <meta name="description" content="Contacta con Conquer Academy. Resolvemos tus dudas sobre cursos, pagos y soporte tecnico. Formulario de contacto y ubicacion.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.png" sizes="any">
+</head>
+
+<body id="top">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="/img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
+        </a>
+        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
+        <nav class="nav" aria-label="Navegacion principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
+            <li class="nav__item">
+              <details class="nav__dropdown">
+                <summary class="nav__link">Cursos</summary>
+                <ul class="nav__submenu">
+                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
+                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
+                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
+                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
+                </ul>
+              </details>
+            </li>
+            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
+            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
+          </ul>
+          <div class="nav__auth">
+            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
+            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+          </div>
+        </nav>
+        <div class="header__actions">
+          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <a href="index.html" class="back-home">← Inicio</a>
+
+  <!-- Main Content -->
+  <main class="contact-page">
+
+    <!-- Page Header -->
+    <section class="contact-page__hero">
+      <div class="contact-page__hero-inner">
+        <h1 class="contact-page__hero-title">Contacto</h1>
+        <p class="contact-page__hero-subtitle">Estamos aqui para ayudarte. Envianos tu consulta y te responderemos lo antes posible.</p>
+      </div>
+    </section>
+
+    <div class="contact-page__content">
+      <div class="container">
+        <div class="contact-page__grid">
+          <div class="contact-page__main">
+            <!-- Contact Form -->
+            <section class="contact-card">
+              <h2 class="contact-card__title">Formulario de contacto</h2>
+              <p class="contact-card__text">Cuanto mas contexto nos des, mas rapida y precisa sera nuestra respuesta.</p>
+
+              <form class="contact-form" action="#" method="post">
+
+                <div class="contact-form__grid">
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="nombre">Nombre completo *</label>
+                    <input class="contact-form__input" type="text" id="nombre" name="nombre" required minlength="2" maxlength="100" placeholder="Tu nombre">
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="email">Correo electronico *</label>
+                    <input class="contact-form__input" type="email" id="email" name="email" required placeholder="tu@email.com">
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="telefono">Telefono (opcional)</label>
+                    <input class="contact-form__input" type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000">
+                  </div>
+
+                  <div class="contact-form__field">
+                    <label class="contact-form__label" for="asunto">Asunto *</label>
+                    <select class="contact-form__select" id="asunto" name="asunto" required>
+                      <option value="">Selecciona un asunto</option>
+                      <option value="cursos">Informacion sobre cursos</option>
+                      <option value="pagos">Pagos y facturacion</option>
+                      <option value="soporte">Soporte tecnico</option>
+                      <option value="colaboracion">Propuesta de colaboracion</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+
+                  <div class="contact-form__field contact-form__field--full">
+                    <label class="contact-form__label" for="mensaje">Mensaje *</label>
+                    <textarea class="contact-form__textarea" id="mensaje" name="mensaje" rows="6" required minlength="20" maxlength="2000" placeholder="Escribe tu mensaje aqui..."></textarea>
+                  </div>
+                </div>
+
+                <fieldset class="contact-form__urgency">
+                  <legend class="contact-form__legend">Nivel de urgencia</legend>
+                  <label class="contact-form__choice" for="urgencia-baja">
+                    <input type="radio" id="urgencia-baja" name="urgencia" value="baja" checked>
+                    <span>Baja - Puede esperar unos dias</span>
+                  </label>
+                  <label class="contact-form__choice" for="urgencia-media">
+                    <input type="radio" id="urgencia-media" name="urgencia" value="media">
+                    <span>Media - Respuesta en 24-48h</span>
+                  </label>
+                  <label class="contact-form__choice" for="urgencia-alta">
+                    <input type="radio" id="urgencia-alta" name="urgencia" value="alta">
+                    <span>Alta - Necesito respuesta urgente</span>
+                  </label>
+                </fieldset>
+
+                <label class="contact-form__consent" for="privacidad">
+                  <input type="checkbox" id="privacidad" name="privacidad" required>
+                  <span>He leido y acepto la <a href="aviso-legal.html">politica de privacidad</a> *</span>
+                </label>
+
+                <div class="contact-form__actions">
+                  <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+                  <p class="contact-form__meta">* Campos obligatorios</p>
+                </div>
+              </form>
+
+              <p class="contact-card__text">Tiempo de respuesta habitual: 24-48 horas laborables.</p>
+            </section>
+
+            <!-- Location -->
+            <section class="contact-page__map contact-card">
+              <h2 class="contact-card__title">Nuestra ubicacion</h2>
+              <address class="contact-map__address">
+                <p>Conquer Academy - Oficinas centrales</p>
+                <p>Calle Gran Via 123, 4a planta<br>28013 Madrid, Espana</p>
+              </address>
+
+              <div class="contact-map__frame">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6091591796654!2d-3.7037901999999998!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287d4d148e1b%3A0xb8a8a8a8a8a8a8a8!2sGran%20V%C3%ADa%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123"
+                  width="100%"
+                  height="400"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Ubicacion de Conquer Academy en Google Maps">
+                </iframe>
+              </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="contact-page__faq contact-card">
+              <h2 class="contact-card__title">Preguntas frecuentes</h2>
+
+              <div class="contact-faq">
+                <details class="contact-faq__item">
+                  <summary class="contact-faq__question">Como puedo recuperar mi contrasena?</summary>
+                  <p class="contact-faq__answer">Ve a la pagina de <a href="login.html">inicio de sesion</a> y haz clic en "He olvidado mi contrasena". Recibiras un email con instrucciones.</p>
+                </details>
+
+                <details class="contact-faq__item">
+                  <summary class="contact-faq__question">Puedo obtener factura de mi compra?</summary>
+                  <p class="contact-faq__answer">Si, todas las compras incluyen factura. Se envia automaticamente a tu email tras la compra. Si necesitas una factura con datos fiscales especificos, contactanos.</p>
+                </details>
+
+                <details class="contact-faq__item">
+                  <summary class="contact-faq__question">Ofrecen descuentos para estudiantes?</summary>
+                  <p class="contact-faq__answer">Si, ofrecemos un 20% de descuento para estudiantes universitarios. Envianos tu solicitud con una foto de tu carnet de estudiante.</p>
+                </details>
+
+                <details class="contact-faq__item">
+                  <summary class="contact-faq__question">Puedo pagar en cuotas?</summary>
+                  <p class="contact-faq__answer">Actualmente solo aceptamos pago unico. Sin embargo, el acceso a los cursos es de por vida, por lo que puedes tomarte el tiempo que necesites.</p>
+                </details>
+              </div>
+            </section>
+          </div>
+
+          <!-- Contact Info -->
+          <aside class="contact-page__sidebar">
+            <section class="contact-card">
+              <h2 class="contact-card__title">Otras formas de contacto</h2>
+              <div class="contact-info">
+                <section class="contact-info__item">
+                  <h3 class="contact-info__heading">Email directo</h3>
+                  <p>Para consultas generales: <strong>info@conqueracademy.com</strong></p>
+                  <p>Para soporte tecnico: <strong>soporte@conqueracademy.com</strong></p>
+                </section>
+
+                <section class="contact-info__item">
+                  <h3 class="contact-info__heading">Redes sociales</h3>
+                  <ul class="contact-info__list">
+                    <li>Twitter: @ConquerAcademy</li>
+                    <li>LinkedIn: Conquer Academy</li>
+                    <li>YouTube: Conquer Academy</li>
+                  </ul>
+                </section>
+
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
+        <nav class="footer__nav" aria-label="Pie de pagina">
+          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" aria-label="Volver arriba">↑</a>
+
+  <script type="module" src="/main.js"></script>
+
+</body>
+
+</html>

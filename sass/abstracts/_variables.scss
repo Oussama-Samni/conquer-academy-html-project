@@ -1,0 +1,93 @@
+// ================================
+// Breakpoints
+// ================================
+$bp-mobile:  480px;
+$bp-tablet:  768px;
+$bp-desktop: 1024px;
+$bp-wide:    1280px;
+
+// ================================
+// Spacing
+// ================================
+$spacing-xs:  4px;
+$spacing-sm:  8px;
+$spacing-md:  16px;
+$spacing-lg:  24px;
+$spacing-xl:  32px;
+$spacing-2xl: 48px;
+$spacing-3xl: 64px;
+
+// ================================
+// Typography — fill in per project
+// ================================
+$font-primary:   'Space Grotesk', sans-serif;
+// $font-secondary: ; // set per project
+
+$font-size-xs:   12px;
+$font-size-sm:   14px;
+$font-size-base: 16px;
+$font-size-md:   18px;
+$font-size-lg:   20px;
+$font-size-xl:   24px;
+$font-size-2xl:  32px;
+$font-size-3xl:  48px;
+
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-bold:    700;
+
+$line-height-tight:  1.2;
+$line-height-normal: 1.5;
+$line-height-loose:  1.8;
+
+// ================================
+// Colors — fill in per project
+// ================================
+$color-primary:       #6366F1;  // indigo — main brand
+$color-primary-hover: #4F46E5;  // indigo darker — hover state
+$color-secondary: #22D3EE;  // cyan — electric accent
+$color-accent:    #10B981;  // emerald — terminal green
+$color-text:      #1E293B;  // dark slate — body text
+$color-heading:   #0F172A;  // near black — headings
+$color-muted:     #64748B;  // slate — secondary/caption text
+$color-white:     #ffffff;
+$color-black:     #000000;
+$color-bg:        #F8FAFC;  // off-white — page background
+$color-bg-dark:   #0F172A;  // dark panel — sections/cards
+$color-border:    #E2E8F0;  // light grey — borders/dividers
+
+// ================================
+// Gradients — fill in per project
+// ================================
+
+
+// ================================
+// Border Radius
+// ================================
+$radius-sm:   4px;
+$radius-md:   8px;
+$radius-lg:   16px;
+$radius-full: 9999px;
+
+// ================================
+// Shadows
+// ================================
+$shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+// ================================
+// Z-index
+// ================================
+$z-dropdown: 100;
+$z-navbar:   200;
+$z-modal:    300;
+$z-toast:    400;
+
+// ================================
+// Transitions
+// ================================
+$transition-fast:   all 0.15s ease;
+$transition-normal: all 0.3s ease;
+$transition-slow:   all 0.5s ease;

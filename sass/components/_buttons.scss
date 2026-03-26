@@ -1,0 +1,51 @@
+@use '../abstracts/abstracts' as a;
+
+// ================================
+// Buttons
+// ================================
+
+.btn {
+  display: inline-block;
+  padding: a.$spacing-sm a.$spacing-lg;
+  border-radius: a.$radius-md;
+  font-size: a.$font-size-sm;
+  font-weight: a.$font-weight-medium;
+  text-align: center;
+  transition: a.$transition-fast;
+  cursor: pointer;
+
+  // Filled — primary color
+  &--primary {
+    background-color: a.$color-primary;
+    color: a.$color-white;
+
+    &:hover {
+      background-color: a.$color-primary-hover;
+      color: a.$color-white;
+    }
+  }
+
+  // Transparent with white border — for dark backgrounds
+  &--ghost {
+    background-color: transparent;
+    color: a.$color-white;
+    border: 1px solid rgba(a.$color-white, 0.3);
+
+    &:hover {
+      border-color: a.$color-white;
+      color: a.$color-white;
+    }
+  }
+
+  // Transparent with primary border — for light backgrounds
+  &--outline {
+    background-color: transparent;
+    color: a.$color-primary;
+    border: 1px solid a.$color-primary;
+
+    &:hover {
+      background-color: a.$color-primary;
+      color: a.$color-white;
+    }
+  }
+}
