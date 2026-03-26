@@ -87,6 +87,10 @@
   border: none;
   box-shadow: a.$shadow-lg;
 
+  .content-card__title {
+    color: a.$color-white;
+  }
+
   blockquote p {
     font-size: a.$font-size-md;
     font-weight: a.$font-weight-medium;
