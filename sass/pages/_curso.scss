@@ -312,7 +312,7 @@
 
 .instructor {
   padding: a.$spacing-lg;
-  background-color: a.$color-white;
+  background-color: a.$color-bg-dark;
   border: 1px solid a.$color-border;
   border-radius: a.$radius-md;
   border-left: 3px solid a.$color-primary;
@@ -320,13 +320,13 @@
   &__name {
     font-size: a.$font-size-md;
     font-weight: a.$font-weight-bold;
-    color: a.$color-heading;
+    color: a.$color-white;
     margin-bottom: a.$spacing-xs;
   }
 
   &__bio {
     font-size: a.$font-size-sm;
-    color: a.$color-muted;
+    color: rgba(a.$color-white, 0.78);
     line-height: a.$line-height-normal;
   }
 }

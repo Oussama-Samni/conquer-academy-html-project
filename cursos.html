@@ -1,230 +1,365 @@
 <!doctype html>
+
 <html lang="es">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cursos de Desarrollo Web - Conquer Academy</title>
-  <meta name="description" content="Bootcamps profesionales de desarrollo web: Fullstack Developer, Backend Developer, Frontend Developer. Formacion intensiva con proyectos reales y garantia de empleo.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./img/favicon.png" sizes="any">
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="index.html" class="header__logo">
-          <img src="./img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
-        </a>
-        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
-        <nav class="nav" aria-label="Navegacion principal">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
-            <li class="nav__item">
-              <details class="nav__dropdown">
-                <summary class="nav__link">Cursos</summary>
-                <ul class="nav__submenu">
-                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
-                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
-                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
-                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
-                </ul>
-              </details>
-            </li>
-            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
-            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
-            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
-          </ul>
-          <div class="nav__auth">
-            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
-            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Cursos de Desarrollo Web - Conquer Academy</title>
+    <meta
+      content="Bootcamps profesionales de desarrollo web: Fullstack Developer, Backend Developer, Frontend Developer. Formación intensiva con proyectos reales y garantía de empleo."
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./img/favicon.png" rel="icon" sizes="any" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="index.html">
+            <img
+              alt="Conquer Academy Logo"
+              height="50"
+              src="./img/Conquerlogo.svg"
+              width="150"
+            />
+          </a>
+          <input class="header__toggle-input" id="nav-toggle" type="checkbox" />
+          <nav aria-label="Navegación principal" class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a aria-label="Inicio" class="nav__link" href="index.html"
+                  ><span class="nav__home-label">Inicio</span
+                  ><span aria-hidden="true" class="nav__home-icon"
+                    ><svg
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.2"
+                      viewbox="0 0 24 24"
+                      width="24"
+                    >
+                      <path d="M3 10.5 12 3l9 7.5"></path>
+                      <path d="M5 9.5V21h14V9.5"></path>
+                      <path d="M9.5 21v-6h5v6"></path></svg></span
+                ></a>
+              </li>
+              <li class="nav__item">
+                <details class="nav__dropdown">
+                  <summary class="nav__link">Cursos</summary>
+                  <ul class="nav__submenu">
+                    <li>
+                      <a class="nav__sublink" href="curso-1.html"
+                        >Fullstack Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-2.html"
+                        >Backend Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-3.html"
+                        >Frontend Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-4.html"
+                        >Data Engineering Bootcamp</a
+                      >
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="quienes-somos.html">Quienes somos</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <div class="nav__auth">
+              <a class="nav__link nav__link--ghost" href="login.html">Login</a>
+              <a class="nav__link nav__link--cta" href="registro.html"
+                >Sign-Up</a
+              >
+            </div>
+          </nav>
+          <div class="header__actions">
+            <label
+              aria-label="Abrir menú"
+              class="header__toggle"
+              for="nav-toggle"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
           </div>
-        </nav>
-        <div class="header__actions">
-          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
         </div>
       </div>
-    </div>
-  </header>
-
-  <a href="index.html" class="back-home">← Inicio</a>
-
-  <!-- Main Content -->
-  <main>
-
-    <!-- Page Header -->
-    <section class="page-header">
+    </header>
+    <a class="back-home" href="index.html">← Inicio</a>
+    <!-- Main Content -->
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-header__title">Bootcamps Profesionales</h1>
+          <p class="page-header__subtitle">
+            Formación intensiva para convertirte en desarrollador profesional
+          </p>
+        </div>
+      </section>
+      <!-- Why Section -->
+      <section class="features">
+        <div class="container">
+          <h2 class="features__title">Por que elegir nuestros bootcamps</h2>
+          <p class="features__intro">Todos nuestros programas incluyen:</p>
+          <ul class="features__list">
+            <li class="features__item">Formación intensiva de 6 a 12 meses</li>
+            <li class="features__item">Proyectos reales para tu portfolio</li>
+            <li class="features__item">Mentoría personalizada 1:1</li>
+            <li class="features__item">
+              Bolsa de empleo y orientación laboral
+            </li>
+            <li class="features__item">Certificado profesional reconocido</li>
+            <li class="features__item">
+              Garantía de empleo o devolución del dinero
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Course List -->
+      <section class="courses-list">
+        <div class="container">
+          <h2 class="courses-list__title">Programas disponibles</h2>
+          <div class="courses-list__grid">
+            <!-- Course 1: Fullstack Developer -->
+            <article class="course-card">
+              <div class="course-card__body">
+                <div class="course-card__meta">
+                  <span class="course-card__duration"
+                    >12 meses · 800+ horas</span
+                  >
+                  <span class="course-card__mode">Online en vivo</span>
+                </div>
+                <h3 class="course-card__title">Fullstack Developer Bootcamp</h3>
+                <p class="course-card__text">
+                  Conviértete en desarrollador fullstack dominando frontend y
+                  backend. Crea aplicaciones web completas desde la interfaz
+                  hasta la base de datos.
+                </p>
+                <ul class="course-card__tech">
+                  <li>
+                    <strong>Frontend:</strong> HTML5, CSS3, JavaScript, React,
+                    TypeScript
+                  </li>
+                  <li>
+                    <strong>Backend:</strong> Node.js, Express, APIs REST,
+                    GraphQL
+                  </li>
+                  <li>
+                    <strong>Bases de datos:</strong> MongoDB, PostgreSQL, Redis
+                  </li>
+                  <li><strong>DevOps:</strong> Git, Docker, CI/CD, AWS</li>
+                </ul>
+              </div>
+              <div class="course-card__footer">
+                <p class="course-card__price">
+                  4.999 EUR <span>financiación disponible</span>
+                </p>
+                <a class="btn btn--primary" href="curso-1.html"
+                  >Ver programa completo</a
+                >
+              </div>
+            </article>
+            <!-- Course 2: Backend Developer -->
+            <article class="course-card">
+              <div class="course-card__body">
+                <div class="course-card__meta">
+                  <span class="course-card__duration"
+                    >9 meses · 600+ horas</span
+                  >
+                  <span class="course-card__mode">Online en vivo</span>
+                </div>
+                <h3 class="course-card__title">Backend Developer Bootcamp</h3>
+                <p class="course-card__text">
+                  Especialízate en el lado del servidor. APIs robustas, bases de
+                  datos, autenticación y arquitectura cloud con Node.js y
+                  Python.
+                </p>
+                <ul class="course-card__tech">
+                  <li>
+                    <strong>Lenguajes:</strong> JavaScript/Node.js, Python, SQL
+                  </li>
+                  <li><strong>Frameworks:</strong> Express, NestJS, FastAPI</li>
+                  <li>
+                    <strong>Bases de datos:</strong> PostgreSQL, MongoDB, Redis
+                  </li>
+                  <li>
+                    <strong>Cloud:</strong> AWS, Docker, Kubernetes básico
+                  </li>
+                </ul>
+              </div>
+              <div class="course-card__footer">
+                <p class="course-card__price">
+                  3.999 EUR <span>financiación disponible</span>
+                </p>
+                <a class="btn btn--primary" href="curso-2.html"
+                  >Ver programa completo</a
+                >
+              </div>
+            </article>
+            <!-- Course 3: Frontend Developer -->
+            <article class="course-card course-card--soon">
+              <div class="course-card__body">
+                <div class="course-card__meta">
+                  <span class="course-card__duration"
+                    >6 meses · 400+ horas</span
+                  >
+                  <span class="course-card__mode">Online en vivo</span>
+                </div>
+                <h3 class="course-card__title">
+                  <a href="curso-3.html">Frontend Developer Bootcamp</a>
+                </h3>
+                <p class="course-card__text">
+                  Domina el arte de crear interfaces modernas, accesibles y de
+                  alto rendimiento. Desde los fundamentos hasta React y Next.js.
+                </p>
+                <ul class="course-card__tech">
+                  <li>
+                    <strong>Fundamentos:</strong> HTML5, CSS3, JavaScript ES6+
+                  </li>
+                  <li>
+                    <strong>Frameworks:</strong> React, Next.js, Tailwind CSS
+                  </li>
+                  <li><strong>Testing:</strong> Jest, Cypress</li>
+                  <li>
+                    <strong>Accesibilidad:</strong> WCAG, ARIA, diseño inclusivo
+                  </li>
+                </ul>
+              </div>
+              <div class="course-card__footer">
+                <p class="course-card__price">
+                  2.999 EUR <span>lista de espera abierta</span>
+                </p>
+                <a class="btn btn--ghost" href="contacto.html"
+                  >Apuntarme a la lista</a
+                >
+              </div>
+            </article>
+            <!-- Course 4: Data Engineering -->
+            <article class="course-card course-card--soon">
+              <div class="course-card__body">
+                <div class="course-card__meta">
+                  <span class="course-card__duration"
+                    >9 meses · 600+ horas</span
+                  >
+                  <span class="course-card__mode">Online en vivo</span>
+                </div>
+                <h3 class="course-card__title">
+                  <a href="curso-4.html">Data Engineering Bootcamp</a>
+                </h3>
+                <p class="course-card__text">
+                  Diseña, construye y mantiene la infraestructura de datos que
+                  alimenta las decisiónes de negocio. Uno de los perfiles mas
+                  demandados.
+                </p>
+                <ul class="course-card__tech">
+                  <li>
+                    <strong>Lenguajes:</strong> Python, SQL avanzado, Scala
+                    básico
+                  </li>
+                  <li>
+                    <strong>Big Data:</strong> Apache Spark, Kafka, Airflow
+                  </li>
+                  <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
+                  <li>
+                    <strong>Data Warehousing:</strong> Snowflake, dbt, ETL/ELT
+                  </li>
+                </ul>
+              </div>
+              <div class="course-card__footer">
+                <p class="course-card__price">
+                  4.499 EUR <span>lista de espera abierta</span>
+                </p>
+                <a class="btn btn--ghost" href="contacto.html"
+                  >Apuntarme a la lista</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- Financing Section -->
+      <section class="financing">
+        <div class="container">
+          <h2 class="financing__title">Opciones de financiación</h2>
+          <p class="financing__subtitle">
+            No dejes que el dinero sea un obstáculo para tu carrera
+          </p>
+          <ul class="financing__list">
+            <li class="financing__item">
+              <strong>Pago a plazos:</strong> Divide el coste en 12 o 24
+              mensualidades sin intereses
+            </li>
+            <li class="financing__item">
+              <strong>ISA (Income Share Agreement):</strong> No pagues nada
+              hasta conseguir empleo
+            </li>
+            <li class="financing__item">
+              <strong>Becas:</strong> Hasta 50% de descuento para perfiles
+              seleccionados
+            </li>
+            <li class="financing__item">
+              <strong>Descuento por pago anticipado:</strong> 10% de descuento
+              si pagas al contado
+            </li>
+          </ul>
+          <a class="btn btn--outline" href="contacto.html"
+            >Consulta opciones de financiación</a
+          >
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta__title">Empieza a aprender hoy</h2>
+          <p class="cta__subtitle">
+            Regístrate gratis y accede a las primeras lecciones de cada curso
+            sin compromiso.
+          </p>
+          <a class="btn btn--primary" href="registro.html"
+            >Crear cuenta gratuita</a
+          >
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <h1 class="page-header__title">Bootcamps Profesionales</h1>
-        <p class="page-header__subtitle">Formacion intensiva para convertirte en desarrollador profesional</p>
-      </div>
-    </section>
-
-    <!-- Why Section -->
-    <section class="features">
-      <div class="container">
-        <h2 class="features__title">Por que elegir nuestros bootcamps</h2>
-        <p class="features__intro">Todos nuestros programas incluyen:</p>
-        <ul class="features__list">
-          <li class="features__item">Formacion intensiva de 6 a 12 meses</li>
-          <li class="features__item">Proyectos reales para tu portfolio</li>
-          <li class="features__item">Mentoria personalizada 1:1</li>
-          <li class="features__item">Bolsa de empleo y orientacion laboral</li>
-          <li class="features__item">Certificado profesional reconocido</li>
-          <li class="features__item">Garantia de empleo o devolucion del dinero</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Course List -->
-    <section class="courses-list">
-      <div class="container">
-        <h2 class="courses-list__title">Programas disponibles</h2>
-        <div class="courses-list__grid">
-
-          <!-- Course 1: Fullstack Developer -->
-          <article class="course-card">
-            <div class="course-card__body">
-              <div class="course-card__meta">
-                <span class="course-card__duration">12 meses · 800+ horas</span>
-                <span class="course-card__mode">Online en vivo</span>
-              </div>
-              <h3 class="course-card__title">Fullstack Developer Bootcamp</h3>
-              <p class="course-card__text">Conviertete en desarrollador fullstack dominando frontend y backend. Crea aplicaciones web completas desde la interfaz hasta la base de datos.</p>
-              <ul class="course-card__tech">
-                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React, TypeScript</li>
-                <li><strong>Backend:</strong> Node.js, Express, APIs REST, GraphQL</li>
-                <li><strong>Bases de datos:</strong> MongoDB, PostgreSQL, Redis</li>
-                <li><strong>DevOps:</strong> Git, Docker, CI/CD, AWS</li>
-              </ul>
-            </div>
-            <div class="course-card__footer">
-              <p class="course-card__price">4.999 EUR <span>financiacion disponible</span></p>
-              <a href="curso-1.html" class="btn btn--primary">Ver programa completo</a>
-            </div>
-          </article>
-
-          <!-- Course 2: Backend Developer -->
-          <article class="course-card">
-            <div class="course-card__body">
-              <div class="course-card__meta">
-                <span class="course-card__duration">9 meses · 600+ horas</span>
-                <span class="course-card__mode">Online en vivo</span>
-              </div>
-              <h3 class="course-card__title">Backend Developer Bootcamp</h3>
-              <p class="course-card__text">Especialízate en el lado del servidor. APIs robustas, bases de datos, autenticacion y arquitectura cloud con Node.js y Python.</p>
-              <ul class="course-card__tech">
-                <li><strong>Lenguajes:</strong> JavaScript/Node.js, Python, SQL</li>
-                <li><strong>Frameworks:</strong> Express, NestJS, FastAPI</li>
-                <li><strong>Bases de datos:</strong> PostgreSQL, MongoDB, Redis</li>
-                <li><strong>Cloud:</strong> AWS, Docker, Kubernetes basico</li>
-              </ul>
-            </div>
-            <div class="course-card__footer">
-              <p class="course-card__price">3.999 EUR <span>financiacion disponible</span></p>
-              <a href="curso-2.html" class="btn btn--primary">Ver programa completo</a>
-            </div>
-          </article>
-
-          <!-- Course 3: Frontend Developer -->
-          <article class="course-card course-card--soon">
-            <span class="course-card__badge">Proximamente</span>
-            <div class="course-card__body">
-              <div class="course-card__meta">
-                <span class="course-card__duration">6 meses · 400+ horas</span>
-                <span class="course-card__mode">Online en vivo</span>
-              </div>
-              <h3 class="course-card__title"><a href="curso-3.html">Frontend Developer Bootcamp</a></h3>
-              <p class="course-card__text">Domina el arte de crear interfaces modernas, accesibles y de alto rendimiento. Desde los fundamentos hasta React y Next.js.</p>
-              <ul class="course-card__tech">
-                <li><strong>Fundamentos:</strong> HTML5, CSS3, JavaScript ES6+</li>
-                <li><strong>Frameworks:</strong> React, Next.js, Tailwind CSS</li>
-                <li><strong>Testing:</strong> Jest, Cypress</li>
-                <li><strong>Accesibilidad:</strong> WCAG, ARIA, diseno inclusivo</li>
-              </ul>
-            </div>
-            <div class="course-card__footer">
-              <p class="course-card__price">2.999 EUR <span>lista de espera abierta</span></p>
-              <a href="contacto.html" class="btn btn--ghost">Apuntarme a la lista</a>
-            </div>
-          </article>
-
-          <!-- Course 4: Data Engineering -->
-          <article class="course-card course-card--soon">
-            <span class="course-card__badge">Proximamente</span>
-            <div class="course-card__body">
-              <div class="course-card__meta">
-                <span class="course-card__duration">9 meses · 600+ horas</span>
-                <span class="course-card__mode">Online en vivo</span>
-              </div>
-              <h3 class="course-card__title"><a href="curso-4.html">Data Engineering Bootcamp</a></h3>
-              <p class="course-card__text">Diseña, construye y mantiene la infraestructura de datos que alimenta las decisiones de negocio. Uno de los perfiles mas demandados.</p>
-              <ul class="course-card__tech">
-                <li><strong>Lenguajes:</strong> Python, SQL avanzado, Scala basico</li>
-                <li><strong>Big Data:</strong> Apache Spark, Kafka, Airflow</li>
-                <li><strong>Cloud:</strong> AWS, GCP, Azure</li>
-                <li><strong>Data Warehousing:</strong> Snowflake, dbt, ETL/ELT</li>
-              </ul>
-            </div>
-            <div class="course-card__footer">
-              <p class="course-card__price">4.499 EUR <span>lista de espera abierta</span></p>
-              <a href="contacto.html" class="btn btn--ghost">Apuntarme a la lista</a>
-            </div>
-          </article>
-
+        <div class="footer__inner">
+          <p class="footer__copy">
+            © 2026 Conquer Academy. Todos los derechos reservados.
+          </p>
+          <nav aria-label="Pie de página" class="footer__nav">
+            <a class="footer__link" href="aviso-legal.html">Aviso legal</a>
+          </nav>
         </div>
       </div>
-    </section>
-
-    <!-- Financing Section -->
-    <section class="financing">
-      <div class="container">
-        <h2 class="financing__title">Opciones de financiacion</h2>
-        <p class="financing__subtitle">No dejes que el dinero sea un obstaculo para tu carrera</p>
-        <ul class="financing__list">
-          <li class="financing__item"><strong>Pago a plazos:</strong> Divide el coste en 12 o 24 mensualidades sin intereses</li>
-          <li class="financing__item"><strong>ISA (Income Share Agreement):</strong> No pagues nada hasta conseguir empleo</li>
-          <li class="financing__item"><strong>Becas:</strong> Hasta 50% de descuento para perfiles seleccionados</li>
-          <li class="financing__item"><strong>Descuento por pago anticipado:</strong> 10% de descuento si pagas al contado</li>
-        </ul>
-        <a href="contacto.html" class="btn btn--outline">Consulta opciones de financiacion</a>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-      <div class="container">
-        <h2 class="cta__title">Empieza a aprender hoy</h2>
-        <p class="cta__subtitle">Registrate gratis y accede a las primeras lecciones de cada curso sin compromiso.</p>
-        <a href="registro.html" class="btn btn--primary">Crear cuenta gratuita</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
-        <nav class="footer__nav" aria-label="Pie de pagina">
-          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <script type="module" src="./main.js"></script>
-
-</body>
-
+    </footer>
+    <script src="./main.js" type="module"></script>
+  </body>
 </html>

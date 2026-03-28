@@ -53,6 +53,12 @@
   &__main--narrow {
     max-width: 900px;
     margin: 0 auto;
+    display: grid;
+    gap: a.$spacing-lg;
+
+    @include a.respond-to(tablet) {
+      gap: a.$spacing-xl;
+    }
   }
 }
 

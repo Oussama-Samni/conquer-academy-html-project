@@ -1,166 +1,280 @@
 <!doctype html>
+
 <html lang="es">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quienes Somos - Conquer Academy</title>
-  <meta name="description" content="Conoce al equipo de Conquer Academy. Somos desarrolladores profesionales apasionados por ensenar desarrollo web de forma practica y accesible.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./img/favicon.png" sizes="any">
-</head>
-
-<body id="top">
-
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <a href="index.html" class="header__logo">
-          <img src="./img/Conquerlogo.svg" alt="Conquer Academy Logo" width="150" height="50">
-        </a>
-        <input type="checkbox" id="nav-toggle" class="header__toggle-input">
-        <nav class="nav" aria-label="Navegacion principal">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="index.html" class="nav__link" aria-label="Inicio"><span class="nav__home-label">Inicio</span><span class="nav__home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg></span></a></li>
-            <li class="nav__item">
-              <details class="nav__dropdown">
-                <summary class="nav__link">Cursos</summary>
-                <ul class="nav__submenu">
-                  <li><a href="curso-1.html" class="nav__sublink">Fullstack Developer Bootcamp</a></li>
-                  <li><a href="curso-2.html" class="nav__sublink">Backend Developer Bootcamp</a></li>
-                  <li><a href="curso-3.html" class="nav__sublink">Frontend Developer Bootcamp</a></li>
-                  <li><a href="curso-4.html" class="nav__sublink">Data Engineering Bootcamp</a></li>
-                </ul>
-              </details>
-            </li>
-            <li class="nav__item"><a href="quienes-somos.html" class="nav__link">Quienes somos</a></li>
-            <li class="nav__item"><a href="blog.html" class="nav__link">Blog</a></li>
-            <li class="nav__item"><a href="contacto.html" class="nav__link">Contacto</a></li>
-          </ul>
-          <div class="nav__auth">
-            <a href="login.html" class="nav__link nav__link--ghost">Login</a>
-            <a href="registro.html" class="nav__link nav__link--cta">Sign-Up</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Quienes Somos - Conquer Academy</title>
+    <meta
+      content="Conoce al equipo de Conquer Academy. Somos desarrolladores profesionales apasionados por ensenar desarrollo web de forma práctica y accesible."
+      name="description"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="./img/favicon.png" rel="icon" sizes="any" />
+  </head>
+  <body id="top">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <a class="header__logo" href="index.html">
+            <img
+              alt="Conquer Academy Logo"
+              height="50"
+              src="./img/Conquerlogo.svg"
+              width="150"
+            />
+          </a>
+          <input class="header__toggle-input" id="nav-toggle" type="checkbox" />
+          <nav aria-label="Navegación principal" class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a aria-label="Inicio" class="nav__link" href="index.html"
+                  ><span class="nav__home-label">Inicio</span
+                  ><span aria-hidden="true" class="nav__home-icon"
+                    ><svg
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2.2"
+                      viewbox="0 0 24 24"
+                      width="24"
+                    >
+                      <path d="M3 10.5 12 3l9 7.5"></path>
+                      <path d="M5 9.5V21h14V9.5"></path>
+                      <path d="M9.5 21v-6h5v6"></path></svg></span
+                ></a>
+              </li>
+              <li class="nav__item">
+                <details class="nav__dropdown">
+                  <summary class="nav__link">Cursos</summary>
+                  <ul class="nav__submenu">
+                    <li>
+                      <a class="nav__sublink" href="curso-1.html"
+                        >Fullstack Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-2.html"
+                        >Backend Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-3.html"
+                        >Frontend Developer Bootcamp</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav__sublink" href="curso-4.html"
+                        >Data Engineering Bootcamp</a
+                      >
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="quienes-somos.html">Quienes somos</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <div class="nav__auth">
+              <a class="nav__link nav__link--ghost" href="login.html">Login</a>
+              <a class="nav__link nav__link--cta" href="registro.html"
+                >Sign-Up</a
+              >
+            </div>
+          </nav>
+          <div class="header__actions">
+            <label
+              aria-label="Abrir menú"
+              class="header__toggle"
+              for="nav-toggle"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
           </div>
-        </nav>
-        <div class="header__actions">
-          <label for="nav-toggle" class="header__toggle" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
         </div>
       </div>
-    </div>
-  </header>
-
-  <a href="index.html" class="back-home">← Inicio</a>
-
-  <!-- Main Content -->
-  <main class="content-page">
-    <section class="content-page__hero">
-      <div class="container">
-        <h1 class="content-page__hero-title">Quienes somos</h1>
-        <p class="content-page__hero-subtitle">Formacion tecnica, enfoque practico y resultados medibles para estudiantes que quieren entrar al sector digital.</p>
-      </div>
-    </section>
-
-    <div class="content-page__body">
-      <div class="container">
-        <div class="content-page__main--narrow">
-          <section class="content-card">
-            <h2 class="content-card__title">Conquer Academy en 30 segundos</h2>
-            <div class="value-list">
-              <div class="value-list__item"><strong>Fundacion:</strong> 2020</div>
-              <div class="value-list__item"><strong>Alumnos formados:</strong> 5.000+</div>
-              <div class="value-list__item"><strong>Catalogo:</strong> 25+ cursos y bootcamps</div>
-              <div class="value-list__item"><strong>Mercado:</strong> Espana y Latinoamerica</div>
-              <div class="value-list__item"><strong>Metodologia:</strong> Proyectos reales y practica guiada</div>
-              <div class="value-list__item"><strong>Objetivo:</strong> Reducir la distancia entre aprender y trabajar</div>
-            </div>
-          </section>
-
-          <section class="content-card about-mission">
-            <h2 class="content-card__title">Lo que hacemos</h2>
-            <blockquote>
-              <p>Ensenamos habilidades digitales utiles para que el alumno pueda construir portfolio, ganar criterio tecnico y estar listo para entrevistas.</p>
-            </blockquote>
-            <p>Menos teoria abstracta. Mas practica, feedback y progresion visible.</p>
-          </section>
-
-          <section class="content-card">
-            <h2 class="content-card__title">Por que conecta con los alumnos</h2>
-            <div class="value-list">
-              <div class="value-list__item"><strong>Ruta clara</strong> - El alumno sabe que aprender y en que orden</div>
-              <div class="value-list__item"><strong>Contenido aplicable</strong> - Ejercicios y proyectos desde el inicio</div>
-              <div class="value-list__item"><strong>Actualizacion continua</strong> - El contenido evoluciona con la industria</div>
-              <div class="value-list__item"><strong>Lenguaje directo</strong> - Explicaciones claras, sin relleno innecesario</div>
-            </div>
-          </section>
-
-          <section class="content-card">
-            <h2 class="content-card__title">Nuestro equipo</h2>
-            <p class="content-card__text">Perfil senior, experiencia real y foco en ensenanza.</p>
-            <div class="team-grid">
-              <article class="team-card">
-                <h3 class="team-card__name">Maria Garcia</h3>
-                <p class="team-card__role">Fundadora y Directora</p>
-                <p class="team-card__bio">15 anos en producto digital y desarrollo full-stack. Define la vision academica y los programas principales.</p>
-              </article>
-              <article class="team-card">
-                <h3 class="team-card__name">Carlos Rodriguez</h3>
-                <p class="team-card__role">Director de Contenidos</p>
-                <p class="team-card__bio">12 anos en frontend. Traduce conceptos tecnicos complejos en rutas de aprendizaje concretas.</p>
-              </article>
-              <article class="team-card">
-                <h3 class="team-card__name">Ana Martinez</h3>
-                <p class="team-card__role">Instructora Principal</p>
-                <p class="team-card__bio">Especialista en HTML, CSS y accesibilidad. Convierte fundamentos web en habilidades realmente utilizables.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="content-card">
-            <h2 class="content-card__title">Conquer Academy en numeros</h2>
-            <div class="stat-grid">
-              <div class="stat-card"><span class="stat-card__value">5.000+</span><span class="stat-card__label">Estudiantes formados</span></div>
-              <div class="stat-card"><span class="stat-card__value">25+</span><span class="stat-card__label">Cursos disponibles</span></div>
-              <div class="stat-card"><span class="stat-card__value">98%</span><span class="stat-card__label">De satisfaccion</span></div>
-              <div class="stat-card"><span class="stat-card__value">4</span><span class="stat-card__label">Anos de experiencia</span></div>
-            </div>
-          </section>
-
-          <section class="content-card cta-band">
-            <h2 class="content-card__title">Si buscas una ruta clara para entrar al sector, empieza aqui</h2>
-            <p class="content-card__text">Explora los programas, compara rutas y elige el siguiente paso con criterio.</p>
-            <div class="cta-band__actions">
-              <a href="registro.html" class="btn btn--primary">Registrate gratis</a>
-              <a href="cursos.html" class="btn btn--ghost">Explorar cursos</a>
-            </div>
-          </section>
+    </header>
+    <a class="back-home" href="index.html">← Inicio</a>
+    <!-- Main Content -->
+    <main class="content-page">
+      <section class="content-page__hero">
+        <div class="container">
+          <h1 class="content-page__hero-title">Quienes somos</h1>
+          <p class="content-page__hero-subtitle">
+            Formación técnica, enfoque practico y resultados medibles para
+            estudiantes que quieren entrar al sector digital.
+          </p>
+        </div>
+      </section>
+      <div class="content-page__body">
+        <div class="container">
+          <div class="content-page__main--narrow">
+            <section class="content-card">
+              <h2 class="content-card__title">
+                Conquer Academy en 30 segundos
+              </h2>
+              <div class="value-list">
+                <div class="value-list__item">
+                  <strong>Fundación:</strong> 2020
+                </div>
+                <div class="value-list__item">
+                  <strong>Alumnos formados:</strong> 5.000+
+                </div>
+                <div class="value-list__item">
+                  <strong>Catálogo:</strong> 25+ cursos y bootcamps
+                </div>
+                <div class="value-list__item">
+                  <strong>Mercado:</strong> Espana y Latinoamerica
+                </div>
+                <div class="value-list__item">
+                  <strong>Metodología:</strong> Proyectos reales y práctica
+                  guíada
+                </div>
+                <div class="value-list__item">
+                  <strong>Objetivo:</strong> Reducir la distancia entre aprender
+                  y trabajar
+                </div>
+              </div>
+            </section>
+            <section class="content-card about-mission">
+              <h2 class="content-card__title">Lo que hacemos</h2>
+              <blockquote>
+                <p>
+                  Enseñamos habilidades digitales útiles para que el alumno
+                  pueda construir portfolio, ganar criterio técnico y estar
+                  listo para entrevistas.
+                </p>
+              </blockquote>
+              <p>
+                Menos teoría abstracta. Mas práctica, feedback y progresión
+                visible.
+              </p>
+            </section>
+            <section class="content-card">
+              <h2 class="content-card__title">
+                Por que conecta con los alumnos
+              </h2>
+              <div class="value-list">
+                <div class="value-list__item">
+                  <strong>Ruta clara</strong> - El alumno sabe que aprender y en
+                  que orden
+                </div>
+                <div class="value-list__item">
+                  <strong>Contenido aplicable</strong> - Ejercicios y proyectos
+                  desde el inicio
+                </div>
+                <div class="value-list__item">
+                  <strong>Actualización continua</strong> - El contenido
+                  evoluciona con la industria
+                </div>
+                <div class="value-list__item">
+                  <strong>Lenguaje directo</strong> - Explicaciones claras, sin
+                  relleno innecesario
+                </div>
+              </div>
+            </section>
+            <section class="content-card">
+              <h2 class="content-card__title">Nuestro equipo</h2>
+              <p class="content-card__text">
+                Perfil senior, experiencia real y foco en enseñanza.
+              </p>
+              <div class="team-grid">
+                <article class="team-card">
+                  <h3 class="team-card__name">Maria Garcia</h3>
+                  <p class="team-card__role">Fundadora y Directora</p>
+                  <p class="team-card__bio">
+                    15 años en producto digital y desarrollo full-stack. Define
+                    la visión académica y los programas principales.
+                  </p>
+                </article>
+                <article class="team-card">
+                  <h3 class="team-card__name">Carlos Rodriguez</h3>
+                  <p class="team-card__role">Director de Contenidos</p>
+                  <p class="team-card__bio">
+                    12 años en frontend. Traduce conceptos técnicos complejos en
+                    rutas de aprendizaje concretas.
+                  </p>
+                </article>
+                <article class="team-card">
+                  <h3 class="team-card__name">Ana Martinez</h3>
+                  <p class="team-card__role">Instructora Principal</p>
+                  <p class="team-card__bio">
+                    Especialista en HTML, CSS y accesibilidad. Convierte
+                    fundamentos web en habilidades realmente utilizables.
+                  </p>
+                </article>
+              </div>
+            </section>
+            <section class="content-card">
+              <h2 class="content-card__title">Conquer Academy en números</h2>
+              <div class="stat-grid">
+                <div class="stat-card">
+                  <span class="stat-card__value">5.000+</span
+                  ><span class="stat-card__label">Estudiantes formados</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card__value">25+</span
+                  ><span class="stat-card__label">Cursos disponibles</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card__value">98%</span
+                  ><span class="stat-card__label">De satisfacción</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-card__value">4</span
+                  ><span class="stat-card__label">Años de experiencia</span>
+                </div>
+              </div>
+            </section>
+            <section class="content-card cta-band">
+              <h2 class="content-card__title">
+                Si buscas una ruta clara para entrar al sector, empieza aquí
+              </h2>
+              <p class="content-card__text">
+                Explora los programas, compara rutas y elige el siguiente paso
+                con criterio.
+              </p>
+              <div class="cta-band__actions">
+                <a class="btn btn--primary" href="registro.html"
+                  >Regístrate gratis</a
+                >
+                <a class="btn btn--ghost" href="cursos.html">Explorar cursos</a>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <p class="footer__copy">&copy; 2026 Conquer Academy. Todos los derechos reservados.</p>
-        <nav class="footer__nav" aria-label="Pie de pagina">
-          <a href="aviso-legal.html" class="footer__link">Aviso legal</a>
-        </nav>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <p class="footer__copy">
+            © 2026 Conquer Academy. Todos los derechos reservados.
+          </p>
+          <nav aria-label="Pie de página" class="footer__nav">
+            <a class="footer__link" href="aviso-legal.html">Aviso legal</a>
+          </nav>
+        </div>
       </div>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" aria-label="Volver arriba">↑</a>
-
-  <script type="module" src="./main.js"></script>
-
-</body>
-
+    </footer>
+    <a aria-label="Volver arriba" class="back-to-top" href="#top">↑</a>
+    <script src="./main.js" type="module"></script>
+  </body>
 </html>
